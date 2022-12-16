@@ -6,17 +6,42 @@
 </head>
 <body>
 
-  <h1>Ethan's Soccer Portfolio</h1>
+  <h1 id="top">Ethan's Soccer Portfolio</h1>
     <div>  <!-- Block Level element occupies the entire space of its parent element (container), thereby creating a "block"-->
         <h3>Hello Coaches!</h3>
     </div>
   <br>
-
-<!--     Inline element such as below, occupies only the space bounded by the tags that define the inline element. -->
-<p>Welcome to <strong>Ethan's Soccer Page</strong>, all his highlight videos and game status will be displayed. </p>
+    <div>
+        <img src="" alt="">
+    </div>
   <br>
-  <input type="text" name="username" placeholder="Ethan Carrillo" />
+
+  <div id="wrapper">  <!-- attributes - elements can contain additional data. attributes are specified inside the opening tag
+                        for an element, and consist of a name, an = sign, and a value inside of double quotes (" ").  -->
+
+    <!--     Inline element such as below, occupies only the space bounded by the tags that define the inline element. -->
+    <p>Welcome to <strong>Ethan's Soccer Page</strong>, all his highlight videos <em>and</em> game status will be displayed. </p>
+  <br>  <!--  void element simply means that they do not contain any content.  -->
+    <input type="text" name="username" placeholder="Ethan Carrillo" />
+  </div>
+  <div>
+      <ul>
+          <li>Ethan Carrillo</li>
+          <li>Soccer Goals</li>
+      </ul>
+      <ol>
+          <li>Ethan Carrillo</li>
+          <li>Soccer Goals</li>
+      </ol>
+  </div>
 
   <h6>Welcome to the EAC!</h6>
+
+    <a href="#top">Go to the top of the page</a>
+  <br>
+    <a href="http://google.com">Go to Google!</a>
+  <br>
+    <a href="http://google.com" target="_blank">Visit google in a new tab / window.</a>   <!--  opens link in a new tab-->
+<!--        target attribute specifies how a link is opened-->
 </body>
 </html>
