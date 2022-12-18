@@ -1,9 +1,21 @@
+/*# targets element by ID, (.) targets by class attribute*/
+
 .fancy-header {
     color: purple;
     text-decoration: underline;
 }
+/*above applied to h1*/
 
-h3  {
+h3, h6 {
     color: magenta;
     text-decoration: underline;
 }
+
+.pink_border {
+    border-color: magenta;
+}
+
+#container_color tr{
+    color: red;
+}
+/*descendent selector above - select by ID selector, in this case a div is selected, then list the descendent element in this case tr element*/
