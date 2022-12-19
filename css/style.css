@@ -38,3 +38,10 @@ a:active {
     color: green;
 }
 
+#pic_div {
+    background-image: url("/../images/ethan_levante.jpeg");
+}
+
+ol { list-style: upper-alpha; }
+ul { list-style: square; }
+
