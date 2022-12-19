@@ -19,3 +19,22 @@ h3, h6 {
     color: red;
 }
 /*descendent selector above - select by ID selector, in this case a div is selected, then list the descendent element in this case tr element*/
+
+#direct_selector > p3 {
+    color: magenta;
+}
+/*direct child selector above - selected by ID selector, this case a div is selected, the > indicates direct child selector in this case <p*/
+
+a:link {
+    color: red;
+}
+a:visited {
+    color: black;
+}
+a:hover {
+    color: blue;
+}
+a:active {
+    color: green;
+}
+
