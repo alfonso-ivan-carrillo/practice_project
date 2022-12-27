@@ -26,7 +26,7 @@
   </ul>
 </nav>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">  <!-- attribute - data-ride="" if "carousel" will autoplay the carousel on load -->
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -35,35 +35,37 @@
         <li data-target="#myCarousel" data-slide-to="4"></li>
     </ol>
     <div class="carousel-inner">
-        <div class="carousel-item active" data-interval="10000" style="background-image:url(images/ethan_levante.jpeg)">
+        <div class="carousel-item active" data-interval="5000" style="background-image:url(images/ethan_levante.jpeg)" data-pause="hover">
+            <!-- attribute - data-interval="" amount of time to delay between automatically cycling an item
+            attribute data-pause="hover" pauses the carousel on mouseenter and resumes on mouseleave -->
             <div class="container">
                 <h1>Levante Tryout Profile</h1>
                 <p>Levante profile of Ethan Carrillo.</p>
                 <a href="#" class="btn btn-lg btn-primary">Profile</a>
             </div>
         </div>
-        <div class="carousel-item" data-interval="10000" style="background-image: url(images/LittleEthanSoccer.jpg)">
+        <div class="carousel-item" data-interval="5000" style="background-image: url(images/LittleEthanSoccer.jpg)">
             <div class="container">
                 <h1>First Soccer Game</h1>
                 <p>Ethan at 5 years old playing in his first soccer game.</p>
                 <a href="#" class="btn btn-lg btn-primary">Profile Pic</a>
             </div>
         </div>
-        <div class="carousel-item" data-interval="10000" style="background-image: url(images/valencia-ethan.jpeg)">
+        <div class="carousel-item" data-interval="5000" style="background-image: url(images/valencia-ethan.jpeg)">
             <div class="container">
                 <h1>Valencia, Spain</h1>
                 <p>Ethan playing in an international friendly soccer game in Valencia, Spain.</p>
                 <a href="#" class="btn btn-lg btn-primary">Valencia</a>
             </div>
         </div>
-        <div id="dortmand" class="carousel-item" data-interval="10000" style="background-image: url(images/dortmand.jpeg)">
+        <div id="dortmand" class="carousel-item" data-interval="5000" style="background-image: url(images/dortmand.jpeg)">
             <div class="container">
                 <h1>Dortmand FC</h1>
                 <p>Signal Iduna Park</p>
                 <a href="https://www.bvb.de/eng#" class="btn btn-lg btn-primary">Dortmand</a>
             </div>
         </div>
-        <div class="carousel-item" data-interval="10000">
+        <div class="carousel-item" data-interval="5000">
             <img id="campnou" src="images/campnou.jpeg" alt="camp nou">
             <div class="container">
                 <h1>Barcelona FC</h1>
@@ -72,7 +74,7 @@
             </div>
         </div>
     </div>
-    <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+    <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">  <!-- attribute - data-slide="" prev or next, alters the slide position relative to its current position -->
         <span class="sr-only">Previous</span>
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     </a>
