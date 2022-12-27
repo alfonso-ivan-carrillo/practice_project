@@ -10,7 +10,7 @@ body {
 
 nav {
     background: dodgerblue;
-    margin-bottom: 1em;
+
 }
 
 ul{
@@ -96,4 +96,8 @@ hr {
 #campnou {
     height: 100%;
     width: 100%;
+}
+#videodropdown{
+    margin-top: 10px;
+    color: orange;
 }
