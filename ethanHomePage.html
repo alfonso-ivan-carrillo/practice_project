@@ -46,6 +46,8 @@
         background: #777;
         color: white;
         position: relative;
+        background-position: top;
+        background-size: cover;
     }
     .container {
         position: absolute;
@@ -58,25 +60,42 @@
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-        <li data-target="'#myCarousel" data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="'#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
-        <div class="carousel-item active">
+        <div class="carousel-item active" style="background-image:url(images/ethan_levante.jpeg)">
             <div class="container">
                 <h1>example headline</h1>
                 <p>Keep a fire burning, no matter how small, no matter how hidden</p>
                 <a href="#" class="btn btn-lg btn-primary">SIGN UP</a>
             </div>
         </div>
-        <div class="carousel-item ">
+        <div class="carousel-item" style="background-image: url(images/LittleEthanSoccer.jpg)">
             <div class="container">
                 <h1>example headline</h1>
                 <p>whats the most you have ever lost in a coin toss?</p>
                 <a href="#" class="btn btn-lg btn-primary">SIGN UP</a>
             </div>
         </div>
+        <div class="carousel-item" style="background-image: url(images/valencia-ethan.jpeg)">
+            <div class="container">
+                <h1>example headline</h1>
+                <p>what business is it of yours friendo?</p>
+                <a href="#" class="btn btn-lg btn-primary">SIGN UP</a>
+            </div>
+        </div>
     </div>
+    <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+        <span class="sr-only">Previous</span>
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </a>
+    <a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
+        <span class="sr-only">Previous</span>
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+
 </div>
 
 <!--Option 2: jQuery, Popper.js, and Bootstrap JS-->
