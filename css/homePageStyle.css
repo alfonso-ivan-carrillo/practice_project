@@ -5,7 +5,7 @@
 
 body {
     margin: 0;
-    background: honeydew;
+    background: white;
 }
 
 nav {
@@ -76,8 +76,8 @@ hr {
 
 .carousel-item {
     height: 32rem;
-    background: #777;
-    color: white;
+    background: lightgray;
+    color: orange;
     position: relative;
     background-position: top;
     background-size: contain;
@@ -87,6 +87,13 @@ hr {
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 0;
+    right: 200px;
     padding-bottom: 50px;
+}
+#dortmand{
+    background-size: cover;
+}
+#campnou {
+    height: 100%;
+    width: 100%;
 }
