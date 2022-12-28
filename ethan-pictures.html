@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ethan's Pictures</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/ethan-pictures-style.css">
+    <script src="https://kit.fontawesome.com/3b822ffb6e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand" href="ethanHomePage.html">Home</a>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="picdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Videos</button>
+            <div class="dropdown-menu" aria-labelledby="picdropdown">
+                <a href="https://www.ncsasports.org/mens-soccer-recruiting/texas/san-antonio/claudia-taylor-johnson-high-school/ethan-carrillo1" class="dropdown-item" target="_blank">NCSA <i class="far fa-regular fa-futbol"></i></a>
+                <a href="https://www.youtube.com/channel/UCb7NcMkpTcsCuGdcTR4GQ0Q" class="dropdown-item" target="_blank">Youtube<i class="fab fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </nav>
+
+  <div id="picCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+    <ol class="carousel-indicators">
+      <li data-target="#picCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#picCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <div class="carousel-inner">
+
+        <div id="ethan_levante_profile_card" class="carousel-item active" data-pause="hover" style="background-image: url(images/ethan_levante.jpeg)">
+            <div class="text-section">
+                <h1>Levante FC Soccer Tryout Profile</h1>
+                <h3>Valencia, Spain</h3>
+            </div>
+            <div class="icons">
+                <a href="https://www.ncsasports.org/mens-soccer-recruiting/texas/san-antonio/claudia-taylor-johnson-high-school/ethan-carrillo1"><i class="far fa-regular fa-futbol"></i></a>
+                <a href="https://www.youtube.com/channel/UCb7NcMkpTcsCuGdcTR4GQ0Q"><i class="fab fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+
+    <div class="carousel-item" style="background-image: url(images/valencia-ethan.jpeg)">
+      <div>
+        <h1>Valencia</h1>
+      </div>
+    </div>
+
+    <a href="#picCarousel" class="carousel-control-prev" role="button" data-slide="prev" >
+      <span class="sr-only">Previous</span>
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </a>
+    <a href="#picCarousel" class="carousel-control-next" role="button" data-slide="next">
+      <span class="sr-only">Next</span>
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+
+    </div>
+  </div>
+<!--  <article id="ethan_card">-->
+<!--    <section>-->
+<!--      <img id="ethan_levante_pic" src="images/ethan_levante.jpeg" alt="Ethan Levante Picture">-->
+<!--    </section>-->
+<!--    <section class="text-section">-->
+<!--      <h2>Ethan Carrillo</h2>-->
+<!--      <h3>Midfielder</h3>-->
+<!--      <hr>-->
+<!--    </section>-->
+<!--    <section class="icons">-->
+<!--      <a href="https://www.ncsasports.org/mens-soccer-recruiting/texas/san-antonio/claudia-taylor-johnson-high-school/ethan-carrillo1"><i class="far fa-regular fa-futbol"></i></a>-->
+<!--      <a href="https://www.youtube.com/channel/UCb7NcMkpTcsCuGdcTR4GQ0Q"><i class="fab fa-brands fa-youtube"></i></a>-->
+<!--    </section>-->
+<!--  </article>-->
+
+  <!--Option 2: jQuery, Popper.js, and Bootstrap JS-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+  <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
+</body>
+</html>
