@@ -8,22 +8,26 @@
     <script src="https://kit.fontawesome.com/3b822ffb6e.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<!--navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
         <a class="navbar-brand" href="ethanHomePage.html">Home</a>
         <div class="dropdown">
             <button class="btn btn-primary dropdown-toggle" type="button" id="picdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Videos</button>
             <div class="dropdown-menu" aria-labelledby="picdropdown">
                 <a href="https://www.ncsasports.org/mens-soccer-recruiting/texas/san-antonio/claudia-taylor-johnson-high-school/ethan-carrillo1" class="dropdown-item" target="_blank">NCSA <i class="far fa-regular fa-futbol"></i></a>
-                <a href="https://www.youtube.com/channel/UCb7NcMkpTcsCuGdcTR4GQ0Q" class="dropdown-item" target="_blank">Youtube<i class="fab fa-brands fa-youtube"></i></a>
+                <a href="https://www.youtube.com/channel/UCb7NcMkpTcsCuGdcTR4GQ0Q" class="dropdown-item" target="_blank">Youtube <i class="fab fa-brands fa-youtube"></i></a>
             </div>
         </div>
     </nav>
 
+<!--carousel-->
   <div id="picCarousel" class="carousel slide carousel-fade" data-ride="carousel">
 
     <ol class="carousel-indicators">
       <li data-target="#picCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#picCarousel" data-slide-to="1"></li>
+      <li data-target="#picCarousel" data-slide-to="2"></li>
+      <li data-target="#picCarousel" data-slide-to="3"></li>
     </ol>
 
     <div class="carousel-inner">
@@ -35,10 +39,24 @@
             </div>
         </div>
 
-    <div class="carousel-item bg-info border border-dark" style="background-image: url(images/valencia-ethan.jpeg)">
+    <div class="carousel-item border border-dark" style="background-image: url(images/valencia-ethan.jpeg); background-color: mediumslateblue">
       <div class="text-section">
         <h1>Valencia</h1>
       </div>
+    </div>
+
+    <div class="carousel-item bg-warning border border-dark" style="background-image: url(images/campnou_ethan.jpeg)">
+        <div class="text-section">
+            <h1>Camp Nou</h1>
+            <h3>Barca Camp</h3>
+        </div>
+    </div>
+
+    <div class="carousel-item bg-success border border-dark" style="background-image: url(images/ethan_virginiashowcase.jpeg)">
+        <div class="text-section">
+            <h1>Virginia Showcase</h1>
+            <h3>Ethan</h3>
+        </div>
     </div>
 
     <a href="#picCarousel" class="carousel-control-prev" role="button" data-slide="prev" >
