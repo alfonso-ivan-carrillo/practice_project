@@ -23,7 +23,14 @@ var google = 400;
 var amazon = 380;
 var facebook = 350;
 
-alert("Total paycheck is $" + (google * 6 + amazon * 4 + facebook * 10) + ".");
+var google_hours = prompt("How many hours did you work for Google?");
+var amazon_hours = prompt("How many hours did you work for Amazon?");
+var facebook_hours = prompt("How many hours logged for FaceBook?");
+var paycheck = ((google * google_hours) + (amazon * amazon_hours) + (facebook * facebook_hours));
+
+alert("Total paycheck is $" + (google * google_hours + amazon * amazon_hours + facebook * facebook_hours) + ".");
+
+console.log(paycheck);
 
 //confirm method returns a boolean value and a prompt method returns string entered by user
 var premium_member = confirm("Are you a premium member?");
