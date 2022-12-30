@@ -1,6 +1,39 @@
+* {
+    box-sizing: border-box;
+}
 body {
     background: grey;
 }
+
+nav {
+    background: dodgerblue;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+nav a {
+    text-decoration: none;
+    color: orange;
+    font-family: Verdana;
+    display: inline-block;
+    padding: 1em;
+}
+nav ul li:nth-child(3){
+    margin-left: auto;
+}
+
+nav a:hover {
+    background: white;
+}
+
+#videodropdown{
+    margin-top: 10px;
+    color: orange;
+}
+
 /*card styling*/
 #ethan_levante_profile_card{
     background-color: coral;
