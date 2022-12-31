@@ -128,4 +128,28 @@ function applyDiscount(price, discountPercent){
 
 console.log((applyDiscount(100, .15)));
 
+
+function isTrue(x){
+    if (x === true){
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(isTrue(1));
+console.log(isTrue(true));
+
+function addOne(x){
+    return(Number(x) + 1);
+}
+
+console.log(addOne(0));
+    console.log(addOne(2));
+    console.log(addOne(-4));
+    console.log(addOne(5.789));
+    console.log(addOne(Infinity));
+    console.log(addOne("2"));
+    console.log(addOne("banana"));
+    console.log(addOne(true));
+
 })();
