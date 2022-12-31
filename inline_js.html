@@ -11,7 +11,35 @@
     <h1>Inline JS File</h1>
   </div>
   <script>
-    console.log("Hello from inline JavaScript!");
+    // console.log("Hello from inline JavaScript!");
+    // var name= prompt("Enter your name");
+    // alert(name);
+    //
+
+    // // scope examples - local vs global
+    // var globalVar = "Look, I'm Global!"; // declare a global variable
+    //
+    // function scopeExample() {
+    //   var localVar = "Look, I'm Local!"; // declare a local variable
+    //   alert(localVar); // localVar is accessible here
+    //   alert(globalVar); // globalVar is accessible here
+    // }
+    //
+    // scopeExample();
+    // alert(localVar); // localVar is NOT accessible here and this will produce an error
+    var x = 300;
+    var y = 100;
+
+    function scopeExample() {
+      var x = 1;
+      var y = 2;
+      console.log('x: ' + x + ' y: ' + y); // x: 1 y: 2
+      return x + y;
+    }
+
+    console.log('x: ' + x + ' y: ' + y); // x: 300 y: 100
+    var returnValue = scopeExample();
+    console.log(returnValue); // 3
   </script>
 
 

@@ -71,7 +71,7 @@ alert(two);
 
 // functions with multiple parameters
 function sum(a, b){
-    var result = a + b;
+    var result = a + b;  // local variable or local scope if Var declared outside of function, it is considered global
     return result;
 }
 console.log(userNumber());
