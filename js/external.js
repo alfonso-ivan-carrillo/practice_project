@@ -49,15 +49,31 @@
 //
 // }
 
+// function
 function userNumber(){
     var userOutput = prompt("Enter a number");
     return parseInt(userOutput);
 }
 
 function incrementNum(x){
-    return (x + 1);
+    return alert(x + 1);
 }
-var num = incrementNum(userNumber());
-console.log(num);
+incrementNum(userNumber());
+// console.log(parseInt(num));
 
+// anonymous function
+var increment = function(x){
+    return x + 1;
+}
 
+var two = increment(5);
+alert(two);
+
+// functions with multiple parameters
+function sum(a, b){
+    var result = a + b;
+    return result;
+}
+console.log(userNumber());
+console.log(two);
+console.log(sum(userNumber(),two));
