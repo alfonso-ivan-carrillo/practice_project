@@ -23,7 +23,7 @@
  */
 
 function analyzeColor(){
-    var color = prompt("Enter a color.");
+    var color = prompt("Enter a color.").toLowerCase();
     var userColor = color;
     if (userColor == "red"){
         return(" \"" + userColor + " like blood said Dracula.\"");
@@ -93,7 +93,7 @@ analyzeColorV2(randomColor);
  * function to show it to the user.
  */
 function analyzeThis(){
-    var userColor = prompt("Enter a color please.");
+    var userColor = prompt("Enter a color please.").toLowerCase();
     analyzeColorV2(userColor);
 }
 analyzeThis();
@@ -119,6 +119,10 @@ analyzeThis();
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+
+function calculateTotal(luckyNumber, totalAmount){
+    var totalAmount
+}
 
 /**
  * TODO:
