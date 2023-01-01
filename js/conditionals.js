@@ -51,7 +51,7 @@ console.log(analyzeColor());
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var colors = ['red', 'black', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
  * TODO:
@@ -63,6 +63,28 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+function analyzeColorV2(randomColor){
+    switch (randomColor){
+        case "red":
+            alert(" \"" + randomColor + " like blood said Dracula.\"");
+            break;
+        case "blue":
+            alert(" \"" + randomColor + " like the veins in your arms,\" said Dracula.");
+            break;
+        case "black":
+            alert(" \"" + randomColor + " like the color of night,\" said Dracula.");
+            break;
+        case "yellow":
+            alert(" \"" + randomColor + " like the color of the sun....oh noooo,\" said Dracula.");
+            break;
+        default:
+            alert("Dracula has never seen that color.");
+            break;
+    }
+}
+
+analyzeColorV2(randomColor);
+
 
 /**
  * TODO:
