@@ -180,4 +180,10 @@ var luckyNumber = Math.floor(Math.random() * 6);
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+function numberId(){
+    var userNum = prompt("Please enter a number.");
+
+
+}
+
 })();
