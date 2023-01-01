@@ -180,10 +180,37 @@ var luckyNumber = Math.floor(Math.random() * 6);
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-function numberId(){
+function getNum(){
     var userNum = prompt("Please enter a number.");
+    return userNum;
+}
+function numberId(number){
+    var num = parseInt(number);
+    if (Number(num)){
+        if(num % 2 == 0){
+            alert(num + " is an even number.");
+            alert("If you add one hundred, you get " + (num + 100));
+            if(num > 0){
+                alert(num + " is a positive number.");
+            } else {
+                alert(num + " is a negative number.");
+            }
+        } else {
+            alert(num + " is an odd number.");
+            alert("If you add one hundred, you get " + (num + 100));
+            if(num > 0 ){
+                alert(num + " is a positive number.");
+            } else {
+                alert(num + " is a negative number.");
+            }
+        }
+    } else {
+        alert("That is not a number.");
+    }
+
 
 
 }
+numberId(getNum());
 
 })();
