@@ -121,8 +121,35 @@ analyzeThis();
  */
 
 function calculateTotal(luckyNumber, totalAmount){
-    var totalAmount
+    // var totalAmount = prompt("Enter total bill amount.");
+    var discountedAmount;
+    switch (luckyNumber){
+        case 1:
+            discountedAmount = totalAmount - (totalAmount * .10);
+            alert("Your lucky number is " + luckyNumber + ". You qualified for a 10% discount, your total bill now is $" + discountedAmount);
+            break;
+        case 2:
+            discountedAmount = totalAmount - (totalAmount * .25);
+            alert("Your lucky number is " + luckyNumber + ". You qualified for a 25% discount, your total bill now is $" + discountedAmount);
+            break;
+        case 3:
+            discountedAmount = totalAmount - (totalAmount * .35);
+            alert("Your lucky number is " + luckyNumber + ". You qualified for a 35% discount, your total bill now is $" + discountedAmount);
+            break;
+        case 4:
+            discountedAmount = totalAmount - (totalAmount * .50);
+            alert("Your lucky number is " + luckyNumber + ". You qualified for a 50% discount, your total bill now is $" + discountedAmount);
+            break;
+        case 5:
+            discountedAmount = totalAmount - totalAmount;
+            alert("Your lucky number is " + luckyNumber + ". You get everthing for free!");
+            break;
+        default:
+            alert("Error!");
+            break;
+    }
 }
+calculateTotal(3, 100);
 
 /**
  * TODO:
