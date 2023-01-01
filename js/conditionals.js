@@ -92,6 +92,11 @@ analyzeColorV2(randomColor);
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+function analyzeThis(){
+    var userColor = prompt("Enter a color please.");
+    analyzeColorV2(userColor);
+}
+analyzeThis();
 
 /* ########################################################################## */
 
