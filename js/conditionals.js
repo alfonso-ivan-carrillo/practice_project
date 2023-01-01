@@ -37,7 +37,7 @@ function analyzeColor(){
         return("Dracula has never seen that color.");
     }
 }
-console.log(analyzeColor());
+// console.log(analyzeColor());
 // console.log(analyzeColor("Red"));
 // console.log(analyzeColor("blue"));
 // console.log(analyzeColor("black"));
@@ -96,7 +96,7 @@ function analyzeThis(){
     var userColor = prompt("Enter a color please.").toLowerCase();
     analyzeColorV2(userColor);
 }
-analyzeThis();
+// analyzeThis();
 
 /* ########################################################################## */
 
@@ -120,36 +120,36 @@ analyzeThis();
  * return value.
  */
 
-function calculateTotal(luckyNumber, totalAmount){
-    // var totalAmount = prompt("Enter total bill amount.");
+function calculateTotal(luckyNumber){
+    var totalAmount = prompt("Enter total bill amount.");
     var discountedAmount;
     switch (luckyNumber){
         case 1:
             discountedAmount = totalAmount - (totalAmount * .10);
-            alert("Your lucky number is " + luckyNumber + ". You qualified for a 10% discount, your total bill now is $" + discountedAmount);
+            alert("Your lucky number is " + luckyNumber + ". You qualified for a 10% discount. Your bill before the discount was $" + totalAmount + ". Your total bill now is $" + discountedAmount);
             break;
         case 2:
             discountedAmount = totalAmount - (totalAmount * .25);
-            alert("Your lucky number is " + luckyNumber + ". You qualified for a 25% discount, your total bill now is $" + discountedAmount);
+            alert("Your lucky number is " + luckyNumber + ". You qualified for a 25% discount. Your bill before the discount was $" + totalAmount + ". Your total bill now is $" + discountedAmount);
             break;
         case 3:
             discountedAmount = totalAmount - (totalAmount * .35);
-            alert("Your lucky number is " + luckyNumber + ". You qualified for a 35% discount, your total bill now is $" + discountedAmount);
+            alert("Your lucky number is " + luckyNumber + ". You qualified for a 35% discount. Your bill before the discount was $" + totalAmount + ". Your total bill now is $" + discountedAmount);
             break;
         case 4:
             discountedAmount = totalAmount - (totalAmount * .50);
-            alert("Your lucky number is " + luckyNumber + ". You qualified for a 50% discount, your total bill now is $" + discountedAmount);
+            alert("Your lucky number is " + luckyNumber + ". You qualified for a 50% discount. Your bill before the discount was $" + totalAmount + ". Your total bill now is $" + discountedAmount);
             break;
         case 5:
             discountedAmount = totalAmount - totalAmount;
-            alert("Your lucky number is " + luckyNumber + ". You get everthing for free!");
+            alert("Your lucky number is " + luckyNumber + ". You get everything for free!");
             break;
         default:
             alert("Error!");
             break;
     }
 }
-calculateTotal(3, 100);
+
 
 /**
  * TODO:
@@ -160,8 +160,8 @@ calculateTotal(3, 100);
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
-
+var luckyNumber = Math.floor(Math.random() * 6);
+    calculateTotal(luckyNumber);
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
