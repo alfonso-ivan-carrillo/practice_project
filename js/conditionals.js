@@ -1,7 +1,7 @@
 "use strict";
 
 /* ########################################################################## */
-
+(function (){
 /**
  * TODO:
  * Create a function named `analyzeColor` that accepts a string that is a color
@@ -22,10 +22,9 @@
  * console.logging the function's return value
  */
 
-function analyzeColor(color){
-
-    var userColor = color.toLowerCase();
-    console.log(userColor);
+function analyzeColor(){
+    var color = prompt("Enter a color.");
+    var userColor = color;
     if (userColor == "red"){
         return(" \"" + userColor + " like blood said Dracula.\"");
     } else if (userColor == "blue"){
@@ -38,11 +37,12 @@ function analyzeColor(color){
         return("Dracula has never seen that color.");
     }
 }
-console.log(analyzeColor("Red"));
-console.log(analyzeColor("blue"));
-console.log(analyzeColor("black"));
-console.log(analyzeColor("Yellow"));
-console.log(analyzeColor("pink"));
+console.log(analyzeColor());
+// console.log(analyzeColor("Red"));
+// console.log(analyzeColor("blue"));
+// console.log(analyzeColor("black"));
+// console.log(analyzeColor("Yellow"));
+// console.log(analyzeColor("pink"));
 
 
 
@@ -122,3 +122,4 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+})();
