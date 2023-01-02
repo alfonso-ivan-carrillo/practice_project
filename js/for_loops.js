@@ -39,11 +39,16 @@ function numOddEven(){
 }
 numOddEven();
 
-for (var i = 0; i < 10; i++){
-    for(var j = 10; j > 0; j--){
-        console.log(j);
+function pyrmaidOutput(rows){
+    for(var i =1; i <= rows; i++ ){
+        var output = "";
+        for (var j = 1; j <= i; j++){
+            output += i + "";
+        }
+        console.log(output);
     }
-    console.log(i);
 }
+
+pyrmaidOutput(9);
 
 })();
