@@ -3,16 +3,23 @@
 (function (){
 
 function userNumber(){
-    var num = prompt("Enter a number please.");
+    do {
+        var num = prompt("Enter a number please.");
+        if (Number(num)){
+            continue;
+        } else {
+            alert("not a valid number, try again.");
+        }
+    } while (!Number(num))
     return num;
 }
+
 
 function showMultiplicationTable(number){
     var i = 0;
     while( i <= 10){
         i++;
         console.log(number + " x " + i + " = "+ (number * i));
-
     }
 }
 showMultiplicationTable(userNumber());
@@ -52,12 +59,28 @@ function pyrmaidOutput(rows){
 pyrmaidOutput(9);
 
 
-
-for (var i = 100; i >= 5; i -= 5 ){
-    console.log(i);
+function fiveByFive(){
+    for (var i = 100; i >= 5; i -= 5 ){
+        console.log(i);
+    }
 }
+fiveByFive();
 
 
+function breakContinue(){
+    var skip = userNumber();
+    console.log("Number to skip is: " + skip);
+    for (var i = 1; i <= 50; i++){
+        if (skip == i){
+            console.log("Yikes, skip this number: " + i);
+            continue;
+        } else if (i % 2 == 1){
+            console.log("This is an odd number: " + i);
+            continue;
+        }
+    }
+}
+breakContinue();
 
 
 })();
