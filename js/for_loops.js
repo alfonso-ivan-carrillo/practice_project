@@ -2,6 +2,11 @@
 
 (function (){
 
+function userNumber(){
+    var num = prompt("Enter a number please.");
+    return num;
+}
+
 function showMultiplicationTable(number){
     var i = 0;
     while( i <= 10){
@@ -10,7 +15,7 @@ function showMultiplicationTable(number){
 
     }
 }
-showMultiplicationTable(7);
+showMultiplicationTable(userNumber());
 
 
 
