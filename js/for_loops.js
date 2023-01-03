@@ -92,6 +92,31 @@ function twoTimes(){
 }
 twoTimes();
 
+function cones(){
+    var allCones = Math.floor(Math.random() * (100 - 50) + 50);
+    console.log(allCones);
+    var balance = 0;
+    do {
+        var conesSold = Math.floor(Math.random() * 5) + 1;
+        if(allCones > conesSold){
+            allCones -= conesSold;
+            balance += conesSold;
+            console.log(allCones + " cones sold");
+            // console.log("cones sold counter: " + balance);
+        } else if (allCones < conesSold){
+            console.log("Cannot sell you " + conesSold + ", I only have " + allCones);
+            // console.log("remaining " + allCones);
+            // console.log("counting... "+ balance);
+            // console.log(conesSold);
+        } else if(allCones == 0 || allCones == conesSold){
+            console.log("Yay! I sold them all!");
+            break;
+        }
+
+    } while (allCones > 0)
+}
+cones();
+
 
 
 })();
