@@ -6,7 +6,7 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
-    var names = ["ethan", "kathy", "bella", "sweet pea"];
+    var names = ["ethan", "kathy", "bella", "sweet pea", "buster", "jack jack"];
 
     /**
      * TODO:
@@ -53,5 +53,18 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+    function firstElement(array){
+        console.log("First element in array is " + array[0] + ".");
+    }
+    firstElement(names);
 
+    function secondElement(array){
+        console.log("Second element in array is " + array[1] + ".");
+    }
+    secondElement(names);
+
+    function lastElement(array){
+        console.log("Last element in araay is " + array[array.length - 1] + ".");
+    }
+    lastElement(names);
 })();
