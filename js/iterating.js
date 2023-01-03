@@ -14,8 +14,12 @@
      * Create a log statement that will log the number of elements in the names
      * array.
      */
+    console.log(names);
     console.log(names.length);
     console.log(superheros.length);
+    superheros.unshift("prof x");
+    superheros.push("beast");
+    console.log(superheros);
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
@@ -80,5 +84,33 @@
     }
     lastElement(names);
     lastElement(superheros);
+
+
+    var horrorMovies = ["the witch", "hereditary", "smile", "barbarian", "evil dead"];
+    horrorMovies.push("day of the dead");
+    console.log(horrorMovies);
+    console.log((horrorMovies[horrorMovies.length - 1])); // last element in array
+    var removedMovie = horrorMovies.pop();
+    console.log(horrorMovies);
+    horrorMovies.shift();
+    console.log(horrorMovies);
+    console.log(removedMovie);
+    console.log(horrorMovies.indexOf("smile"));
+    console.log(horrorMovies.lastIndexOf("barbarian"));
+    var partOne = horrorMovies.slice(1,3);  // starts at index 1 (includes it) ends at index 3 but doesnt include it
+    console.log(partOne);
+    var nums = [1, 2, 3, 4, 5];
+    console.log(nums);
+    nums.reverse();
+    console.log(nums);
+    nums.sort();
+    console.log(nums);
+
+    var movieString = "deadpool,wolverine,xmen";
+    console.log(movieString);
+    var movieArray = movieString.split(',');
+    console.log(movieArray);
+    var backToString = movieArray.join(',');
+    console.log(backToString);
 
 })();
