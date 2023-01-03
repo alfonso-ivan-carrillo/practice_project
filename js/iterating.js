@@ -7,6 +7,7 @@
      * 'names'.
      */
     var names = ["ethan", "kathy", "bella", "sweet pea", "buster", "jack jack"];
+    var superheros = ["wolverine", "deadpool", "captain america", "domino", "juggernaut", "hellboy"];
 
     /**
      * TODO:
@@ -14,6 +15,7 @@
      * array.
      */
     console.log(names.length);
+    console.log(superheros.length);
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
@@ -32,12 +34,20 @@
 
         console.log("index number: " + i + " - names: "+ names[i]);
     }
+
+    for (var i = 0; i < superheros.length; i++){
+        console.log("Superhero names: " + superheros[i]);
+    }
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
     names.forEach(function (name){
         console.log("My name is " + name);
+    })
+
+    superheros.forEach(function (hero){
+        console.log(hero);
     })
 
     /**
@@ -57,14 +67,18 @@
         console.log("First element in array is " + array[0] + ".");
     }
     firstElement(names);
+    firstElement(superheros);
 
     function secondElement(array){
         console.log("Second element in array is " + array[1] + ".");
     }
     secondElement(names);
+    secondElement(superheros);
 
     function lastElement(array){
         console.log("Last element in araay is " + array[array.length - 1] + ".");
     }
     lastElement(names);
+    lastElement(superheros);
+
 })();
