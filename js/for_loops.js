@@ -109,7 +109,7 @@ function cones(){
             // console.log("counting... "+ balance);
             // console.log(conesSold);
         } else if(allCones == 0 || allCones == conesSold){
-            console.log("Yay! I sold them all!");
+            document.write("<h1>Yay! I sold them all!</h1>");
             break;
         }
 
