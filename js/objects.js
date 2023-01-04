@@ -8,13 +8,31 @@
     console.log(car["make"]);
     console.log(car.model);
 
-    var hero = {                // curly braces also creates new object
+    var heros = [{                // curly braces also creates new object
         name: "woverine",
-        gender: "male",
-    };
-    console.log("hero " + typeof hero);
-    console.log(hero.name);
-    console.log(hero.gender);
+        team: "x-men",
+        powers: ["healing", "claws", "animal senses"],
+        secretIdentity: {
+            alias: "logan",
+            job: "fighter"
+        }
+    },
+        {
+        name: "deadpool",
+        team: "x-force",
+        powers: ["healing", "weapons master", "humor"],
+            secretIdentity: {
+                alias: "wade",
+                job: "merc"
+            }
+    }];
+    console.log("The name of the first hero is " + heros[0].name + ".");
+    console.log("The name of the second hero is " + heros[1].name + ".");
+
+    heros.forEach(function (hero){
+        console.log(hero.name);
+    })
+
 
 
     /**
