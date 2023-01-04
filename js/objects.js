@@ -5,8 +5,12 @@
     console.log("car " + typeof car);
     car.make = "toyota";
     car["model"] = "tacoma";
+    car.honk = function (){
+        alert("Honk! Honk!");
+    }
     console.log(car["make"]);
     console.log(car.model);
+    car.honk();
 
     var heros = [{                // curly braces also creates new object
         name: "woverine",
@@ -15,23 +19,46 @@
         secretIdentity: {
             alias: "logan",
             job: "fighter"
+        },
+        action: function (){
+            alert("Snkt!");
+        },
+        activate: function (){
+            console.log("Woverline: \"You messed up bub.\" " + this.action());
         }
+
     },
         {
         name: "deadpool",
         team: "x-force",
         powers: ["healing", "weapons master", "humor"],
-            secretIdentity: {
-                alias: "wade",
-                job: "merc"
-            }
+        secretIdentity: {
+            alias: "wade",
+            job: "merc"
+        },
+        action: function () {
+            alert("Pow Pow!");
+        },
+        activate: function (){
+            console.log("Deadpool: \"Ha Ha!\" " + this.activate());
+        }
+
     }];
     console.log("The name of the first hero is " + heros[0].name + ".");
     console.log("The name of the second hero is " + heros[1].name + ".");
 
     heros.forEach(function (hero){
-        console.log(hero.name);
+        console.log(hero.name + " : " + hero.team);
     })
+    heros.forEach(function (hero){
+        hero.powers.forEach(function (power){
+            console.log(power);
+        })
+    })
+    // heros[0].action();
+    // heros[1].action();
+    heros[0].activate();
+
 
 
 
