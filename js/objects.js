@@ -80,7 +80,7 @@
             }
     }
     console.log(person.firstName + " " + person.lastName);
-    person.sayHello();
+
 
     /**
      * TODO:
@@ -91,6 +91,7 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+    person.sayHello();
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -106,11 +107,23 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    function hebDiscount(){
+        var discount = .12;
+        shoppers.forEach(function (shopper){
+            if (shopper.amount >= 200){
+                console.log(shopper.name + " qualified for a discount of 12%. He paid $" + shopper.amount + " but after discount is applied the shopper will pay $" + (shopper.amount - (shopper.amount * discount)) + ".");
+            } else {
+                console.log(shopper.name + " did not qualify for a discount. The shopper will pay the full price of $" + shopper.amount + ".");
+            }
+        })
+    }
+    hebDiscount();
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
