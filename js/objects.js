@@ -72,6 +72,15 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
+        var person = {
+            firstName: "Alfonso",
+            lastName: "Carrillo",
+            sayHello: function (){
+                console.log("Hello from " + this.firstName + " " + this.lastName + ".");
+            }
+    }
+    console.log(person.firstName + " " + person.lastName);
+    person.sayHello();
 
     /**
      * TODO:
