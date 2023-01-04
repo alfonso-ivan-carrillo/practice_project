@@ -138,6 +138,41 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
+    var books = [{
+            title: "The Road",
+            author: {
+                firstName: "Cormac",
+                lastName: "McCarthy"
+            }
+        },
+        {
+            title: "Fight Club",
+            author: {
+                firstName: "Chuck",
+                lastName: "Palanhck"
+            }
+        },
+        {
+            title: "A Game of Thornes",
+            author: {
+                firstName: "George",
+                lastName: "Martin"
+            }
+        },
+        {
+            title: "The First Law",
+            author: {
+                firstName: "Joe",
+                lastName: "Abercombie"
+            }
+        },
+        {
+            title: "John Dies at the End",
+            author: {
+                firstName: "James",
+                lastName: "Wong"
+            }
+        }];
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -162,7 +197,11 @@
      *      ---
      *      ...
      */
-
+    for (var i = 0; i < books.length ; i++){
+        console.log("Book # " + (i+  1));
+        console.log("Title: " + books[i].title);
+        console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
+    }
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
