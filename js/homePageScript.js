@@ -38,8 +38,20 @@ function favoriteTeam(){
 }
     favoriteTeam();
 
+var coachInfo = [];
 
+function captureCoachInfo(){
+    var name = prompt("Enter name");
+    var email = prompt("enter email");
+    var coach = {
+        name: name,
+        email: email
+    }
+    return coachInfo.push(coach);
+}
 
+captureCoachInfo();
+console.log(coachInfo);
 
 
 
