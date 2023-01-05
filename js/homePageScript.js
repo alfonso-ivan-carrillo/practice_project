@@ -50,9 +50,19 @@ function captureCoachInfo(){
     return coachInfo.push(coach);
 }
 
-captureCoachInfo();
-console.log(coachInfo);
+// captureCoachInfo();
+// console.log(coachInfo);
 
+function doCapture(){
+    var again = "yes";
+    do {
+        captureCoachInfo();
+
+        again = prompt("Would you like to enter another coaches' info? (yes/no)").toLowerCase();
+    } while (again == "yes")
+    console.log(coachInfo);
+}
+doCapture();
 
 
 
