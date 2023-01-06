@@ -5,6 +5,10 @@
     <title>Defuse the BOM</title>
 </head>
 <body>
+<nav id="navbar">
+    <h1 id="headquarters">Bomb Headquarters:</h1>
+    <a id="anchorLink" href="www.google.com">Google</a>
+</nav>
 
 <h2 id="message">This BOM will self destruct in <span id="timer">10</span> seconds...</h2>
 <button id="defuser">Defuse the BOM</button>
@@ -12,6 +16,24 @@
 <script>
 (function() {
     "use strict";
+
+    var headquarters = document.getElementById('headquarters');
+    console.log(headquarters);
+    console.log(headquarters.innerHTML);
+    headquarters.innerHTML = "Boom Boom Boom";
+
+    var navbar = document.getElementById('navbar');
+    console.log(navbar);
+
+    console.log("has attribute id? " + navbar.hasAttribute("id"));
+    console.log("has attribute class? " + navbar.hasAttribute("class"));
+    console.log("get attribute: " + navbar.getAttribute("id"));
+    navbar.setAttribute("class", "navbar_class");
+    console.log("has attribute class now? " + navbar.hasAttribute("class"));
+
+    var anchorLink = document.getElementById("anchorLink");
+    console.log(anchorLink.hasAttributes("id"));
+    anchorLink.setAttribute("href", "http://gamestop.com");  // changes to gamestop.com
 
     var detonationTimer = 10;
 
@@ -22,9 +44,7 @@
     //         document.body.innerHTML = '<h1>Boom!</h1>';
     //     } else if (detonationTimer > 0) {
     //         document.getElementById('timer').innerHTML = detonationTimer;
-    //
     //     }
-    //
     //     detonationTimer--;      // -- reducing timer or counter
     // }
 
@@ -33,6 +53,7 @@
 
     // var bombInterval = setInterval(updateTimer, 1000);
 
+    // code refactors the function and setInterval above, more aligned to example in BOM example in lesson
     var bombInterval = setInterval(function () {
         if(detonationTimer == 0){
             alert("BOOM!");
@@ -42,9 +63,6 @@
         }
         detonationTimer--;
     }, 1000);
-
-
-
     function defuseTheBOM() {
         clearInterval(bombInterval);
         alert("Crisis Averted!");
