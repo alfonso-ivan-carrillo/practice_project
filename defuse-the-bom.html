@@ -6,31 +6,49 @@
 </head>
 <body>
 
-<h2 id="message">This BOM will self destruct in <span id="timer">5</span> seconds...</h2>
+<h2 id="message">This BOM will self destruct in <span id="timer">10</span> seconds...</h2>
 <button id="defuser">Defuse the BOM</button>
 
 <script>
 (function() {
     "use strict";
 
-    var detonationTimer = 5;
+    var detonationTimer = 10;
 
     // TODO: This function needs to be called once every second
-    function updateTimer() {
-        if (detonationTimer == 0) {
-            alert('EXTERMINATE!');
-            document.body.innerHTML = '';
-        } else if (detonationTimer > 0) {
-            document.getElementById('timer').innerHTML = detonationTimer;
-        }
-
-        detonationTimer--;
-    }
+    // function updateTimer() {
+    //     if (detonationTimer == 0) {
+    //         alert('EXTERMINATE!');
+    //         document.body.innerHTML = '<h1>Boom!</h1>';
+    //     } else if (detonationTimer > 0) {
+    //         document.getElementById('timer').innerHTML = detonationTimer;
+    //
+    //     }
+    //
+    //     detonationTimer--;      // -- reducing timer or counter
+    // }
 
     // TODO: When this function runs, it needs to
     // cancel the interval/timeout for updateTimer()
-    function defuseTheBOM() {
 
+    // var bombInterval = setInterval(updateTimer, 1000);
+
+    var bombInterval = setInterval(function () {
+        if(detonationTimer == 0){
+            alert("BOOM!");
+            document.body.innerHTML = "<h1>Boom!!!</h1>";
+        } else if (detonationTimer > 0){
+            document.getElementById('timer').innerHTML = detonationTimer;
+        }
+        detonationTimer--;
+    }, 1000);
+
+
+
+    function defuseTheBOM() {
+        clearInterval(bombInterval);
+        alert("Crisis Averted!");
+        // window.location = "https://www.youtube.com/watch?v=3GwjfUFyY6M";
     }
 
     // Don't modify anything below this line!
