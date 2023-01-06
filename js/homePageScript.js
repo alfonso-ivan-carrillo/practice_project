@@ -41,8 +41,8 @@ function favoriteTeam(){
 var coachInfo = [];
 
 function captureCoachInfo(){
-    var name = prompt("Enter name");
-    var email = prompt("enter email");
+    var name = prompt("Hello Coach, please enter your name.");
+    var email = prompt("Please enter your email, we promise not to send you to many emails.");
     var coach = {
         name: name,
         email: email
