@@ -75,15 +75,19 @@
         // TODO: Set text color on every other list item to orange
 
         var listItems = document.getElementsByTagName("li");
+        var listButton = document.getElementById('list-button');
 
-        for (var i = 0; i < listItems.length; i++){
-            if (i % 2 == 0){
-                listItems[i].style.color = "orange";
-            } else if (i % 2 == 1){
-                listItems[i].style.color = "red";
-            }
-        };
+        var listColorChange = function (event){
+            for (var i = 0; i < listItems.length; i++){
+                if (i % 2 == 0){
+                    listItems[i].style.color = "orange";
+                } else if (i % 2 == 1){
+                    listItems[i].style.color = "red";
+                }
+            };
+        }
 
+        listButton.addEventListener("click", listColorChange);
 
         // TODO: Set text color of li with dbid = 1 to blue
         for (var i =0; i < listItems.length; i++){
