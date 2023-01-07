@@ -63,7 +63,13 @@
         var subHeader = document.getElementById("sub-header");
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue";
+
+        var subHeaderBlue = function (event){
+            subHeader.style.color = "blue";
+        }
+
+        var subHeaderButton = document.getElementById("sub-header button");
+        subHeaderButton.addEventListener("click", subHeaderBlue);
 
         // TODO: Uncomment the next line and get all list items
         // TODO: Set text color on every other list item to orange
