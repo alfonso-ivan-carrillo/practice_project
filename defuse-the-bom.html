@@ -39,6 +39,17 @@
     bodyTag.style.color = "navy";
     bodyTag.style["background-color"] = "grey";
 
+    function addElement(){
+        const newDiv = document.createElement("div");
+        const newContent = document.createTextNode("Pearl Jam! Pearl Jam! Pearl Jam!");
+
+        newDiv.appendChild(newContent);
+
+        navbar = document.getElementById('navbar');
+        document.body.insertBefore(newDiv, navbar);
+    }
+    addElement();
+
     // ****************************************
 
     var detonationTimer = 10;
