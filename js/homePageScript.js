@@ -72,8 +72,24 @@ function doCapture(){
 doCapture();
 
 
+var eycParagraph = document.getElementById('eycParagraph');
+var eycBtn = document.getElementById('eycBtn');
+
+var eycParagraphChange = function (event){
+    eycParagraph.innerHTML = "Ethan soccer career began at the age of 5 years old."
+}
+
+eycBtn.addEventListener('click', eycParagraphChange);
 
 
+var eycImage = document.getElementById('eycImage');
+var eycBtn2 = document.getElementById('eycBtn2');
+var imageChange = function (event){
+    console.log(eycImage.hasAttribute("src"));
+    eycImage.setAttribute("src", "images/ethan_levante.jpeg");
+}
+
+eycBtn2.addEventListener('click', imageChange);
 
 
 

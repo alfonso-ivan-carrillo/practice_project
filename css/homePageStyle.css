@@ -7,10 +7,10 @@ body {
     margin: 0;
     background: white;
 }
+/*body of page*/
 
 nav {
     background: dodgerblue;
-
 }
 
 ul{
@@ -36,13 +36,20 @@ nav ul li:nth-child(4){
     margin-left: auto;
 }
 /*above style for nav bar header*/
+#cardsDiv {
+    display: flex;
+}
+
+#ethan_young_card {
+    margin: auto;
+}
 
 #ethan_card{
     background-color: coral;
     border: 20px solid orange;
     width: 600px;
     height: 800px;
-    margin: auto;
+    margin: 100px;
     color: blue;
 }
 img {
@@ -71,6 +78,8 @@ hr {
 .icons a:hover{
     background-color: white;
 }
+
+
 
 /*above main card*/
 
