@@ -19,6 +19,7 @@
         <li data-dbid="5">Item 5</li>
     </ul>
     <button id="list-button" type="button">List Change</button>
+    <button id="firstLi">first li change</button>
 </div>
 <div>
     <h2 id="sub-header">Hello Again.</h2>
@@ -35,7 +36,7 @@
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
         culpa qui officia deserunt mollit anim id est laborum.
     </p>
-    <button type="button">Paragraph Change</button>
+    <button id="pChange">Paragraph Change</button>
 </div>
 
 <script>
@@ -88,20 +89,31 @@
         }
 
         listButton.addEventListener("click", listColorChange);
+        var liBlue = document.getElementById('firstLi');
 
         // TODO: Set text color of li with dbid = 1 to blue
-        for (var i =0; i < listItems.length; i++){
-            var dbid = listItems[i].getAttribute("data-dbid")
-            if (dbid == 1){
-            listItems[i].style.color = "blue";
+
+        function blueChange(event){
+            for (var i =0; i < listItems.length; i++){
+                var dbid = listItems[i].getAttribute("data-dbid")
+                if (dbid == 1){
+                listItems[i].style.color = "blue";
+                }
             }
         }
+        liBlue.addEventListener("click", blueChange);
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName("sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = "Mission Accomplished!";
+        var missionA = function (event){
+            subParagraphs[0].innerHTML = "Mission Accomplished!";
+        }
+
+        var pChange = document.getElementById('pChange');
+        pChange.addEventListener("click", missionA);
+
 
     })();
 </script>
