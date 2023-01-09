@@ -49,7 +49,7 @@ function captureCoachInfo(){
     }
 
     var divTag = document.createElement("div");
-    var newContent = document.createTextNode("Welcome Coach " + name);
+    var newContent = document.createTextNode("Welcome Coach, " + name + ".");
     divTag.appendChild(newContent);
     var docCore = document.getElementById("myCarousel");
     document.body.insertBefore(divTag, docCore);
