@@ -7,3 +7,10 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+#navbar {
+    border: solid 5px deepskyblue;
+    background-color: blueviolet;
+    color: deepskyblue;
+    margin-bottom: 20px;
+}
