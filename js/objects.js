@@ -111,6 +111,9 @@ var shoppers = [
     {name: 'Ryan', amount: 250},
     {name: 'George', amount: 320}
 ];
+for (var i = 0; i < shoppers.length; i++){
+    console.log(shoppers[i].name);
+}
 
 function hebDiscount(){
     var discount = .12;
