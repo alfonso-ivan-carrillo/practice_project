@@ -1,6 +1,5 @@
 "use strict"
 
-// renders the html for selected coffee
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
     html += '<td>' + coffee.id + '</td>';
@@ -11,10 +10,28 @@ function renderCoffee(coffee) {
     return html;
 }
 
+function renderCoffeeDiv(coffee){
+    var html = "<div class='coffeeDiv'>";
+     html += "<div> " + coffee.id + "</div>";
+     html += "<div>" + coffee.name + "</div>";
+     html += "<div>" + coffee.roast + "</div>";
+    html += "</div>";
+}
+
+function renderCoffeesDivs(coffees) {
+    var html = '';
+    // for(var i = coffees.length - 1; i >= 0; i--) {  // this renders the array in descending order due to how the loop is setup
+    for (var i = 0; i < coffees.length - 1; i++){
+        html += renderCoffee(coffees[i]);
+    }
+    return html;
+}
+
+
 function renderCoffees(coffees) {
     var html = '';
-    // for(var i = coffees.length - 1; i >= 0; i--) {  // this was reversing the order of the array
-    for(var i = 0; i <= coffees.length -1; i++) {
+    // for(var i = coffees.length - 1; i >= 0; i--) {  // this renders the array in descending order due to how the loop is setup
+    for (var i = 0; i < coffees.length - 1; i++){
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -50,12 +67,13 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
-
 submitButton.addEventListener('click', updateCoffees);
+
+var coffeeDiv = document.getElementById("coffeeDiv");
+coffeeDiv.innerHTML = renderCoffeesDivs(coffees);
