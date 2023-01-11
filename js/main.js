@@ -10,12 +10,21 @@
 //     return html;
 // }
 
+// function renderCoffees(coffees) {
+//     var html = '';
+//     // for(var i = coffees.length - 1; i >= 0; i--) {  // this renders the array in descending order due to how the loop is setup
+//     for (var i = 0; i < coffees.length - 1; i++){
+//         html += renderCoffee(coffees[i]);
+//     }
+//     return html;
+// }
+
 function renderCoffeeDiv(coffee){
     var html = "<div class='coffeeDiv row'>";
-     // html += "<div> " + coffee.id + "</div>";
-     html += "<div><h2>" + coffee.name + "</h2></div>";
-     html += "<div><small>" + coffee.roast + "</small></div>";
-     html += "</div>";
+    // html += "<div> " + coffee.id + "</div>";
+    html += "<div><h2>" + coffee.name + "</h2></div>";
+    html += "<div><small>" + coffee.roast + "</small></div>";
+    html += "</div>";
 
     return html;
 }
@@ -29,14 +38,6 @@ function renderCoffeesDivs(coffees) {
 }
 
 
-// function renderCoffees(coffees) {
-//     var html = '';
-//     // for(var i = coffees.length - 1; i >= 0; i--) {  // this renders the array in descending order due to how the loop is setup
-//     for (var i = 0; i < coffees.length - 1; i++){
-//         html += renderCoffee(coffees[i]);
-//     }
-//     return html;
-// }
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
