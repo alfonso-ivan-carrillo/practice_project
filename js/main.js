@@ -85,6 +85,9 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        } else if (selectedRoast === "all"){
+            console.log("all");
+            filteredCoffees.push(coffee);
         }
     });
     coffeeDiv.innerHTML = renderCoffeesDivs(filteredCoffees);
