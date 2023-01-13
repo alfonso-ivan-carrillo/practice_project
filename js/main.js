@@ -55,15 +55,22 @@ function renderCoffeesDivs(coffees) {
 }
 
 function searchCoffee(){
-    var y = coffeeSearch.value;
-    console.log(y);
-    var x = y.charAt(0).toUpperCase() + y.slice(1);
-    console.log(x);
+    var filterArray = [];
+    var inputedCoffee = coffeeSearch.value;
+    var emptyArray = {
+        name: 'something'
+    };
+
+    emptyArray.name = inputedCoffee.charAt(0).toUpperCase() + inputedCoffee.slice(1).toLowerCase();
+    console.log(emptyArray);
     coffees.forEach(function (coffee){
-        if (coffee.name === x){
-            console.log(coffee.name + " " + coffee.roast);
+        if (coffee.name.includes(emptyArray.name)){
+            console.log(coffee);
         }
+
     })
+
+
 }
 
 
@@ -90,7 +97,7 @@ var roastSelection = document.querySelector('#roast-selection');
 
 var coffeeSearch = document.getElementById("coffee-Search");
 
-coffeeSearch.addEventListener("keydown", searchCoffee);
+coffeeSearch.addEventListener("keyup", searchCoffee);
 
 // tbody.innerHTML = renderCoffees(coffees);
 
