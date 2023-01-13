@@ -15,6 +15,14 @@
     margin-bottom: 20px;
 }
 
+#formDiv {
+    border: solid 10px deepskyblue;
+}
+
+#coffeeContainer{
+    border: solid 10px goldenrod;
+}
+
 /*#formDiv {*/
 /*    width: 500px;*/
 /*    height: 200px;*/

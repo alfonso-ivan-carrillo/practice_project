@@ -48,7 +48,7 @@ function renderCoffeeDiv(coffee){
 
 function renderCoffeesDivs(coffees) {
     var html = '';
-    for (var i = 0; i < coffees.length - 1; i++){
+    for (var i = 0; i < coffees.length; i++){
         html += renderCoffeeDiv(coffees[i]);
     }
     return html;
@@ -62,15 +62,17 @@ function searchCoffee(){
     };
 
     emptyArray.name = inputedCoffee.charAt(0).toUpperCase() + inputedCoffee.slice(1).toLowerCase();
-    console.log(emptyArray);
+    // console.log(emptyArray);
     coffees.forEach(function (coffee){
+        console.log(coffee);
         if (coffee.name.includes(emptyArray.name)){
-            console.log(coffee);
+            for (var i = 0; i < coffee.name.length; i++){
+            }
+            filterArray.push(coffee);
         }
-
+        // console.log(filterArray);
     })
-
-
+    coffeeDiv.innerHTML = renderCoffeesDivs(filterArray);
 }
 
 
