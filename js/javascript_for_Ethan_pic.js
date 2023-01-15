@@ -89,17 +89,37 @@
                 }
                 filteredTeams.push(team);
             }
-
-        })
+        });
         futbolDisplay.innerHTML = renderFutbolTeams(filteredTeams);
     }
 
+    function leagues(e){
+        e.preventDefault();
+        var displayedLeague = [];
+        var selectedLeague = leagueSelection.value;
+        futbolTeams.forEach(function (team){
+            if (team.league == selectedLeague){
+                displayedLeague.push(team);
+            } else if (selectedLeague == "all"){
+                displayedLeague.push(team);
+            }
+        });
+        futbolDisplay.innerHTML = renderFutbolTeams(displayedLeague);
+    }
 
+    // to display futbol teams on html
     var futbolDisplay = document.getElementById("futbolDisplay");
     futbolDisplay.innerHTML = renderFutbolTeams(futbolTeams);
 
     var inputTeam = document.getElementById("inputTeam");
     inputTeam.addEventListener("keyup", searchTeams);
+
+    var leagueSelection = document.getElementById('leagueSelection');
+    var leagueSubmitBtn = document.getElementById('submitLeague');
+
+    leagueSubmitBtn.addEventListener('click', leagues);
+
+
 
 
 })();

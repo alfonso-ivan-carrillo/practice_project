@@ -103,8 +103,33 @@
 <div id="futbolDiv" class="container">
     <div id="teamDiv" class="bg bg-warning">
         <h1>Teams and Leagues</h1>
+        <div>
+            <form class="col">
+                <div class="form-group">
+                    <strong>Search by League</strong><br>
+                    <label for="leagueSelection"></label>
+                    <select class="custom-select w-25" name="leagueSelection" id="leagueSelection">
+                        <option value="all">Available Leagues</option>
+                        <option value="La Liga">La Liga</option>
+                        <option value="Premier League">Premier League</option>
+                        <option value="Le Ligue 1">Le Ligue 1</option>
+                        <option value="Liga Portugal">Liga Portugal</option>
+                        <option value="Bundesliga">Bundesliga</option>
+                        <option value="Eredivise">Eredivise</option>
+                        <option value="MLS">MLS</option>
+                        <option value="USL Championship">USL Championship</option>
+                        <option value="Scottish Premiership">Scottish Premiership</option>
+                        <option value="League of Ireland">League of Ireland</option>
+                    </select>
+                    <input class="btn btn-info" id="submitLeague" type="submit" />
+                </div>
+            </form>
+        </div>
+        <div class="container">
+        <label for="inputTeam"><strong>Search by Team Name</strong></label>
         <input id="inputTeam" class="form-control col-md-2 ml-2" type="text" placeholder="Search">
         <div id="futbolDisplay" class="col"></div>
+        </div>
     </div>
 </div>
 <!--JavaScript Script-->
