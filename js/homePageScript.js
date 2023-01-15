@@ -79,6 +79,33 @@ var eycParagraphChange = function (event){
     eycParagraph.innerHTML = "Ethan soccer career began at the age of 5 years old."
 }
 
+function imagesSelector(e){
+    e.preventDefault();
+    console.log(myPic.hasAttribute("src"));
+    var selectedImage = picSelector.value;
+    selectedImage = Number(selectedImage);
+    console.log(selectedImage);
+    console.log(typeof (selectedImage));
+    if(selectedImage == 1){
+        myPic.hasAttribute("src");
+        myPic.setAttribute("src", "images/ethan_levante.jpeg");
+    } else if (selectedImage === 2){
+        myPic.hasAttribute("src");
+        myPic.setAttribute("src", "images/ethan_virginiashowcase.jpeg");
+    } else if (selectedImage === 3){
+        myPic.hasAttribute("src");
+        myPic.setAttribute('src', 'images/valencia-ethan.jpeg');
+    }
+}
+
+
+var myPic = document.getElementById('myPic');
+var picSelector = document.getElementById('picSelector');
+var picSubmitBtn = document.getElementById('picSubmitBtn');
+
+picSubmitBtn.addEventListener('click', imagesSelector);
+
+
 eycBtn.addEventListener('click', eycParagraphChange);
 
 
