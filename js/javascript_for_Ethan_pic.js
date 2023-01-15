@@ -71,18 +71,21 @@
     }
 
     function searchTeams(){
-        var filteredTeams = [];                 // to store search results, then used to display
-        var teamValue = inputTeam.value;        // captures value of inputted keyed by user and stores in a new variable
-        var teamObject = {             // created object to format results pushed into filteredTeams array
-            name: 'teamNamePlaceHolder'         // must be done in order for above functions to be able to format and display correctly
+        // to store search results, then used to display
+        var filteredTeams = [];
+        // captures value of inputted keyed by user and stores in a new variable
+        var teamValue = inputTeam.value;
+        // created object to format results pushed into filteredTeams array must be done in order for above functions to be able to format and display correctly
+        var teamObject = {
+            name: 'teamNamePlaceHolder'
         }
-        teamObject.name = teamValue.charAt(0).toUpperCase() + teamValue.slice(1).toLowerCase();  // capitalizes first letter of word keyed and stores in teamObject for comparison
 
-        futbolTeams.forEach(function(team){         // iterates through array
-            if (team.name.includes(teamObject.name)){                   // checks if team.name includes any letters keyed by user
-                console.log(team);
+        // capitalizes first letter of word keyed and stores in teamObject for comparison
+        teamObject.name = teamValue.charAt(0).toUpperCase() + teamValue.slice(1);  // how to make case insensitive? check on it
+
+        futbolTeams.forEach(function(team){     // iterates through array
+            if (team.name.includes(teamObject.name)){                  // checks if team.name includes any letters keyed by user
                 for (var i = 0; i < team.name.length; i++){
-
                 }
                 filteredTeams.push(team);
             }
@@ -97,5 +100,6 @@
 
     var inputTeam = document.getElementById("inputTeam");
     inputTeam.addEventListener("keyup", searchTeams);
+
 
 })();
