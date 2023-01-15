@@ -48,8 +48,8 @@ function captureCoachInfo(){
         email: email
     }
 
-    var divTag = document.createElement("div");
-    var newContent = document.createTextNode("Welcome Coach, " + name + ".");
+    var divTag = document.createElement("h1");
+    var newContent = document.createTextNode( "Welcome Coach, " + name + ".");
     divTag.appendChild(newContent);
     var docCore = document.getElementById("myCarousel");
     document.body.insertBefore(divTag, docCore);
@@ -90,8 +90,6 @@ var imageChange = function (event){
 }
 
 eycBtn2.addEventListener('click', imageChange);
-
-
 
 
 

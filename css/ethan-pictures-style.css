@@ -2,9 +2,10 @@
     box-sizing: border-box;
 }
 body {
-    background: grey;
+    background: deepskyblue;
 }
 
+/*nav bar css*/
 nav {
     background: dodgerblue;
 }
@@ -63,14 +64,6 @@ hr {
     margin-top: 0px;
 }
 
-/*.icons{*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    font-size: 2.5em;*/
-/*    margin-right: 10px;*/
-/*}*/
-
 .icons a:hover{
     background-color: white;
 }
@@ -83,4 +76,15 @@ hr {
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+/*futbol Team styling*/
+#teamDiv {
+    border: solid 10px white;
+    display: block;
+    text-align: center;
+}
+
+#futbolDisplay {
+    margin-left: 300px;
 }

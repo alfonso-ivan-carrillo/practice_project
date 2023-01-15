@@ -70,7 +70,6 @@ function searchCoffee(){
             }
             filterArray.push(coffee);
         }
-        // console.log(filterArray);
     })
     coffeeDiv.innerHTML = renderCoffeesDivs(filterArray);
 }
