@@ -71,10 +71,24 @@
     }
 
     function searchTeams(){
+        var filteredTeams = [];
+        var teamInput = inputTeam.value;
+        var teamInputLowerCase = teamInput.toLowerCase();
+        console.log(teamInputLowerCase);
+        futbolTeams.forEach(function (team){
+            console.log(team);
+            // if (teamInputLowerCase.includes(team.toLowerCase())){
+            //     console.log(team);
+            // }
+        })
+
     }
 
 
     var futbolDisplay = document.getElementById("futbolDisplay");
     futbolDisplay.innerHTML = renderFutbolTeams(futbolTeams);
+
+    var inputTeam = document.getElementById("inputTeam");
+    inputTeam.addEventListener("keyup", searchTeams);
 
 })();

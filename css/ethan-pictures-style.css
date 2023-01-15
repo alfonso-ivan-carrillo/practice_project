@@ -82,9 +82,9 @@ hr {
 #teamDiv {
     border: solid 10px white;
     display: block;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 #futbolDisplay {
-    margin-left: 300px;
+    margin-left: 400px;
 }
