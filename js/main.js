@@ -61,7 +61,7 @@ function searchCoffee(){
         name: 'something'
     };
 
-    emptyArray.name = inputedCoffee.charAt(0).toUpperCase() + inputedCoffee.slice(1).toLowerCase();
+    emptyArray.name = inputedCoffee.charAt(0).toUpperCase() + inputedCoffee.slice(1);
     // console.log(emptyArray);
     coffees.forEach(function (coffee){
         console.log(coffee);
