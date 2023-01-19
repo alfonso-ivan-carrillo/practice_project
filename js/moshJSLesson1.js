@@ -83,4 +83,22 @@
     console.log(c);
     console.log(d);
 
+// todo     Primitives are copied by their value.
+
+    let number = 10;
+    function increase(number){
+        number++;
+    }
+    increase(number);
+    console.log(number);    // logs 10 in console, parameter 'number' in function is out of scope
+
+// todo     Objects are copied by their reference.
+    let obj = {value: 10};
+
+    function increaseObj(obj){
+       obj.value++;
+    }
+    increaseObj(obj);
+    console.log(obj);
+
 }());
