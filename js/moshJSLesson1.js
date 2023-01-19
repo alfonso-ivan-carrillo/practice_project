@@ -21,7 +21,7 @@
     // todo -> Factories - or constructor function
     function createCircle(radius){
         return {                                    // todo --> if the function returns an object, then you are using a factory
-            radius: radius,
+            radius: radius,     //todo   takes parameter and adds it to the radius value
             draw: function (){
                 console.log('Draw One');
             }
@@ -32,7 +32,7 @@
     console.log(circleFactory.radius);
 
     // todo Constructor Function
-    function Circle(radius){
+    function Circle(radius){                            // todo -->  notice capitalization of 'circle'
         this.radius = radius;                           // todo -->  this.  refers to the circle object being created
         this.draw = function (){
             console.log("Constructor Circle");
@@ -100,5 +100,28 @@
     }
     increaseObj(obj);
     console.log(obj);
+
+
+    function Square(side){
+        this.side = side;
+        this.area = Math.pow(side, 2);
+    }
+
+    let squareOne = new Square(10);
+    console.log(squareOne.side);
+    console.log(squareOne.area);
+
+//todo you can add properties to an object on the fly in JS, if were using Java would have to adjust CLASS
+    squareOne.color = { color: "green"};
+    squareOne['border-color'] = {borderColor: 'red'};   //todo use the Bracket Notation if property has special characters or spaces
+
+    console.log(squareOne);
+    console.log(squareOne['border-color']);
+
+//todo you can also delete properties
+    delete squareOne.color;
+    delete squareOne['border-color'];
+    console.log(squareOne);
+
 
 }());
