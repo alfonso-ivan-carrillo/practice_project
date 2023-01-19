@@ -155,18 +155,27 @@ function Triangle(length, width){
     this.draw = function (){
         console.log("draw triangle");
     }
-}
 
+//todo  Getter - to access private value or variable declared in function use this method - read only
+//todo      Object.defineProperty(this, 'variable needed to access', {get: function() { return "variable needed to access"});
+    Object.defineProperty(this, 'color', {
+        get: function (){
+            return color;
+        },
+        set: function (value){          //todo   Setter - set: function(value) { variable needed to access: value});   -- sets value
+            color = value;
+        }
+    });
+
+}
 
     let triangleOne = new Triangle(5, 3);
     triangleOne.draw();
     triangleOne.area();
-
-
-
-
-
-
+    console.log(triangleOne.color);
+    triangleOne.color = 'blue';
+    console.log(triangleOne.color);
+    console.log(triangleOne);
 
 
 }());
