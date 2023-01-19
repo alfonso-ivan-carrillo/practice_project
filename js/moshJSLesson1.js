@@ -124,4 +124,18 @@
     console.log(squareOne);
 
 
+//todo  Enumerating Properties  --> for in loop
+    for (let key in squareOne){
+        console.log(key, squareOne[key]);   //todo    key gives you name of properties  object[key] gives you value of properties
+    }
+
+    const keys = Object.keys(squareOne);    //todo     returns properties of object as an array, note you cannot get values with this method
+    console.log(keys);
+
+//todo      to check if an object has a property use the 'in' operator
+    if ('area' in squareOne){
+        console.log("this has an area");
+    }
+
+
 }());
