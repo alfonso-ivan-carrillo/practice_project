@@ -53,7 +53,7 @@
     console.log(Circle.length);
     console.log(Circle.constructor);
 
-                // todo -> Notice Function is capitalized to call internal function that creates objects
+                // todo -> Notice 'Function' is capitalized to call internal function that creates objects
     // const CircleTest = new Function("radius",
     //     `this.radius = radius;
     //     this.draw = function(){
@@ -65,7 +65,22 @@
     // newCircle.draw();
     // console.log(newCircle);
 
+// todo     Primitives are copied by their value
+    let a = 10;
+    let b = a;
 
+    a = 20;
 
+    console.log("a = " + a);
+    console.log("b = " + b);
+
+// todo     Objects are copied by their reference
+    let c = {value: 10};
+    let d = c;
+
+    c.value = 20;
+
+    console.log(c);
+    console.log(d);
 
 }());
