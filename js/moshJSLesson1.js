@@ -137,5 +137,36 @@
         console.log("this has an area");
     }
 
+//todo      abstraction  -  hide the details/show only the essentials
+
+function Triangle(length, width){
+    let color = 'red';            //todo you can make a value private or inaccessible by declaring a variable within the function / limits public interaction/helps with abstraction
+    let area = function (x, y){     //todo equivalent to making a private variable in java
+        let area = x * y;
+        return area;
+    }
+    this.length = length;
+    this.width = width;
+    this.area = function (){
+        area = (this.width * this.length);
+        console.log(area);
+    }
+    this.borderColor = color;
+    this.draw = function (){
+        console.log("draw triangle");
+    }
+}
+
+
+    let triangleOne = new Triangle(5, 3);
+    triangleOne.draw();
+    triangleOne.area();
+
+
+
+
+
+
+
 
 }());
