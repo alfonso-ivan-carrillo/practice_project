@@ -38,7 +38,11 @@
     function elapsedTime(){
         let el = (endTime - startTime) / 1000;
         console.log(el + " seconds.");
-        return(el );
+        renderDiv.innerHTML = el + " seconds";
+    }
+
+    function render(){
+
     }
 
 
@@ -63,6 +67,7 @@
     var startWatch = document.getElementById('startWatch');
     var stopWatch = document.getElementById('stopWatch');
     var elpasedTime = document.getElementById('elapsedTime');
+    var renderDiv = document.getElementById('renderDiv');
 
 
     startWatch.addEventListener('click', startUp);
