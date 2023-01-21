@@ -41,8 +41,8 @@
         renderDiv.innerHTML = el + " seconds";
     }
 
-    function render(){
-
+    function renderClear(){
+        renderDiv.innerHTML = " ";
     }
 
 
@@ -68,11 +68,13 @@
     var stopWatch = document.getElementById('stopWatch');
     var elpasedTime = document.getElementById('elapsedTime');
     var renderDiv = document.getElementById('renderDiv');
+    var clearDiv = document.getElementById('clearDiv');
 
 
     startWatch.addEventListener('click', startUp);
     stopWatch.addEventListener('click', endUp);
     elpasedTime.addEventListener('click', elapsedTime);
+    clearDiv.addEventListener('click', renderClear);
 
 
 

@@ -54,6 +54,7 @@ function renderCoffeesDivs(coffees) {
     return html;
 }
 
+
 function searchCoffee(){
     var filterArray = [];
     var inputedCoffee = coffeeSearch.value;
