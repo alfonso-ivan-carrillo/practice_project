@@ -2,40 +2,43 @@
 
 (function (){
 
-    let count = 0;
-    let max = 10;
-    let interval = 1000;
+    // let count = 0;
+    // let max = 10;
+    // let interval = 1000;
+    //
+    //
+    //
+    // var time = setInterval(function (){
+    //     if(count >= max){
+    //         clearInterval(time);
+    //     } else {
+    //         count++;
+    //         console.log(count);
+    //     }
+    // }, interval);
+    //
 
+    let startTime = 0;
+    let endTime = 0;
 
-
-    var time = setInterval(function (){
-        if(count >= max){
-            clearInterval(time);
-        } else {
-            count++;
-            console.log(count);
-        }
-    }, interval);
 
     function startUp(){
         let startTimer = Date.now();
         console.log(startTimer);
-        return(startTimer);
+        return (startTime = startTimer);
+        console.log(startTimer);
     };
 
     function endUp(){
         let endTimer = Date.now();
         console.log(endTimer);
-        return endTimer;
+        return (endTime = endTimer);
     }
 
     function elapsedTime(){
-        let start = startWatch.value;
-        console.log(start);
-        let end = endUp();
-        let el = end - start;
-        console.log(el);
-        return(el);
+        let el = (endTime - startTime) / 1000;
+        console.log(el + " seconds.");
+        return(el );
     }
 
 
@@ -53,9 +56,6 @@
 
     }
 
-    let watch = new StopWatch();
-    watch.start();
-    watch.end();
 
 
 
@@ -63,15 +63,11 @@
     var startWatch = document.getElementById('startWatch');
     var stopWatch = document.getElementById('stopWatch');
     var elpasedTime = document.getElementById('elapsedTime');
-    var timeTester = document.getElementById('timeTest');
 
 
-    // startWatch.addEventListener('click', startUp);
+    startWatch.addEventListener('click', startUp);
     stopWatch.addEventListener('click', endUp);
     elpasedTime.addEventListener('click', elapsedTime);
-    timeTester.addEventListener('click', function (){
-        return(clearInterval(time));
-    })
 
 
 
