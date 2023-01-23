@@ -37,7 +37,7 @@
         {name: 'PSG', league: 'Le Ligue 1'},
         {name: 'Porto', league: 'Liga Portugal'},
         {name: 'Manchester City', league: 'Premier League'},
-        {name: 'Real Madrid', league: 'la Liga'},
+        {name: 'Real Madrid', league: 'La Liga'},
         {name: 'Benfica', league: 'Liga Portugal'},
         {name: 'Marseille', league: 'Le Ligue 1'},
         {name: 'Bayern', league: 'Bundesliga'},

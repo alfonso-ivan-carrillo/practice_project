@@ -42,7 +42,7 @@
     }
 
     function renderClear(){
-        renderDiv.innerHTML = " ";
+        renderDiv.innerHTML = "00:00";
     }
 
 
@@ -69,6 +69,8 @@
     var elpasedTime = document.getElementById('elapsedTime');
     var renderDiv = document.getElementById('renderDiv');
     var clearDiv = document.getElementById('clearDiv');
+
+    renderDiv.innerHTML = "00:00";
 
 
     startWatch.addEventListener('click', startUp);
