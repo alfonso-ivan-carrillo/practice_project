@@ -34,7 +34,7 @@ $(document).ready(function (){
 
    let jqSelector = document.getElementById('jqSelector');
 //todo   notice if you getElementById, when using jQuery to select/manipulate element, don't place withing "quotes".
-   $(jqSelector).html("<h5>jQuery</h5>");
+   $(jqSelector).html("<h6>jQuery</h6>");
 
    //todo   JS Selector
    let jsSelector = document.getElementById('jsSelector');
@@ -50,14 +50,31 @@ $(document).ready(function (){
    let newElement = document.createElement("hr");
    $(target).after(newElement);
 
+//todo   When jQuery function is invoked, it will return a jQuery object wrapping any elements that match the element selected
+   // can be verified by logging/alerting length of object
+   let headings = $('h5');
+   alert(headings.length);
+   console.log(headings.length);
+
+   headings.css('color', 'red');
+
+//todo   .eq(0) selects first element of elements selected by jQuery selector
+   let firstHeading = headings.eq(0);
+   firstHeading.css('color', 'green');
 
 
+//todo   .get() returns element, in case below it would return -> <h6 style="font-weight: bold">Yield</h6>
+   let yieldAlbum = $('h6').get(1);
+   // console.log(yieldAlbum.length);
+   console.log(yieldAlbum);
 
+//todo  jQuery objects objects are not equal
+   let eddieOne = $('#vedder');
+   let edditTwo = $('#vedder');
 
+   console.log($('#vedder') === $('#vedder'));  //todo   returns False - compares objects
 
-
-
-
+   console.log(edditTwo === edditTwo);          //todo   returns True - compares elements selected
 
 
 });
