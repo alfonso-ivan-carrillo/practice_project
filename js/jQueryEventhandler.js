@@ -41,6 +41,14 @@ $(document).ready(function (){
         }, function (){
             $(this).attr('src', 'images/bill-flag.jpeg');
         }
+    );
+
+    $('#smithImage').hover(
+        function (){
+            $(this).attr('src', 'images/agent-smith-fan.jpeg');
+        }, function (){
+            $(this).attr('src', 'images/agent-smith-matrix.webp');
+        }
     )
 
 
