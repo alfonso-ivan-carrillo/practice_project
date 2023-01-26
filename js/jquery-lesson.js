@@ -9,6 +9,8 @@
 //todo      Multiple Selectors -- $('selector1, selector2');
 //todo      To Select All Elements on a page -- $('*');
 
+//todo jQuery - $(document).ready(function(){ });  === (function(){  }();
+
 
 $(document).ready(function (){
    alert("Page is loaded");
@@ -38,7 +40,7 @@ $(document).ready(function (){
 
    //todo   JS Selector
    let jsSelector = document.getElementById('jsSelector');
-   jsSelector.innerHTML = "<h3>Hello World!</h3>";
+   jsSelector.innerHTML = "<h3>Eddie Vedder!</h3>";
 
    //todo   Using JS to insert a new element after another with he native DOM API.
    // let firstH1 = document.getElementById("firstH1");
@@ -70,11 +72,14 @@ $(document).ready(function (){
 
 //todo  jQuery objects objects are not equal
    let eddieOne = $('#vedder');
-   let edditTwo = $('#vedder');
+   let eddie1 = eddieOne.get(0);
+
+   let eddieTwo = $('#vedder');
+   let eddie2 = eddieTwo.get(0);
+
+   console.log(eddie1 == eddie2);          //todo   returns True - compares elements selected
 
    console.log($('#vedder') === $('#vedder'));  //todo   returns False - compares objects
-
-   console.log(edditTwo === edditTwo);          //todo   returns True - compares elements selected
 
 
 });
