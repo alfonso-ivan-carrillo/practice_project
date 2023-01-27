@@ -28,7 +28,7 @@ $(document).ready(function (){
 
 
 //todo  .hover() event handler combines two other event handlers: MOUSEENTER and MOUSELEAVE
-//todo      $(selector).hover(handlerIn, handlerOut); same as $(selector).mouseenter(handleIn); and $(selector).mouseleave(handlerOut);
+//      $(selector).hover(handlerIn, handlerOut); same as $(selector).mouseenter(handleIn); and $(selector).mouseleave(handlerOut);
     $('#antonImage').hover(
         function (){
             $(this).attr('src', 'images/chigurgh-dof.jpg');     //todo  .attr() - manipulates an elements attribute
@@ -60,13 +60,29 @@ $(document).ready(function (){
 
 
 
+//todo  .keydown() - will trigger an event on key press
+//      .keyup() similiar to .keydow() but will trigger when a key is released.
+     $('#textfield').keydown(function (){
+         alert(".keydown");
+     });
+
+//todo  .keypress() - works the same as .kedown() but will not trigger when shift, control, escape, etc is pressed
+//     $('#textfield').keypress(function (){
+//         alert('.keypress');
+//     });
 
 
+//todo  .on()  - this method takes the event listener type and a callback function.
 
+    // $('#textfield').on('keydown', function (){
+    //     alert('keydown.on()');
+    // });
 
-
-
-
+//todo  .off() - removes event listeners from a specified element or elements.
+//      first setup the event for the button that will turn off the targeted event listeners, then target the element to turn off
+    $('#offBtn').click(function (){
+        $('#textfield').off('keydown');
+    });
 
 
 });
