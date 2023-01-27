@@ -85,4 +85,16 @@ $(document).ready(function (){
     });
 
 
+//todo  .fadeout() and .fadeIn()
+   $('#fadeoutBtn').click(function (){
+       $('#fadeHeader').fadeOut('slow');
+   });
+
+   $('#fadeinBtn').click(function (){
+       $('#fadeHeader').fadeIn();
+   })
+
+
+
+
 });
