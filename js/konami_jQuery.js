@@ -1,6 +1,7 @@
 "use strict";
 
 $(document).ready(function (){
+    console.log("Page is loaded.");
 
     let konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
     let test = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
@@ -16,12 +17,16 @@ $(document).ready(function (){
     function compare(userinput){
         // console.log(konamiCode.toString() == userinput.toString());
         console.log((JSON.stringify(konamiCode) == JSON.stringify(userinput)));
+        let nums = (JSON.stringify(konamiCode) == JSON.stringify(userinput));
+        if(nums){
+            alert("You have added 30 lives!");
+        }
     }
 
-    console.log(JSON.stringify(konamiCode));
-    console.log(konamiCode.toString());
+    // console.log(JSON.stringify(konamiCode));
+    // console.log(konamiCode.toString());
 
-    console.log(JSON.stringify(konamiCode) == konamiCode.toString());
+    // console.log(JSON.stringify(konamiCode) == konamiCode.toString());
 
 //todo
 // methods to compare two arrays
@@ -40,6 +45,15 @@ $(document).ready(function (){
 //  using .every()
     const everyArray = (array1, array2) =>
         array1.length === array2.length && array1.every((element, index) => element === array2[index]);
+
+    function arrayEvery(array1, array2){
+        if(array1.length === array2.length && array1.every((element, index) => element === array2[index])){
+            return true;
+        } else {
+            return false;
+        }
+    };
+
 
 //todo
 //      using a loop to compare
@@ -68,7 +82,7 @@ $(document).ready(function (){
         }
     }
 
-    console.log(arrayLoop(konamiCode, test));
+    // console.log(arrayLoop(konamiCode, test));
 
 
 });
