@@ -2,6 +2,9 @@
 
 $(document).ready(function (){
     console.log("Page is loaded.");
+    let kimage = 'images/konami.large.jpg';
+
+    $('#konamiImage').css('background-image', 'url(' + kimage + ')');
 
     let konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
     let test = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
@@ -19,9 +22,15 @@ $(document).ready(function (){
         console.log((JSON.stringify(konamiCode) == JSON.stringify(userinput)));
         let nums = (JSON.stringify(konamiCode) == JSON.stringify(userinput));
         if(nums){
+            $('#konamiImage').css('display', 'block');
+            $('#resetBtn').css('display', 'block');
             alert("You have added 30 lives!");
         }
-    }
+    };
+
+    $('#resetBtn').click(function (){
+        location.reload(true);
+    });
 
     // console.log(JSON.stringify(konamiCode));
     // console.log(konamiCode.toString());
