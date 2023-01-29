@@ -70,11 +70,16 @@ $(document).ready(function (){
     });
 
 //todo  .removeClass() - remove class to elements
+//  (special note for self - when targeting button for click, make sure html button has type attribute defined
     $('#removeBtn').click(function (){
         $('.oddP').removeClass('oddP');
     });
 
-
+//todo .toggleClass() - toggle between class - even class present on element, then toggle will remove class, if not present will add class
+//  (special note for self - when targeting button for click, make sure html button has type attribute defined
+    $('#toggleBtn').click(function (){
+        $('.oddP').toggleClass('highlighted');
+    });
 
 
 
