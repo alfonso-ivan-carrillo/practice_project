@@ -16,11 +16,41 @@ $(document).ready(function (){
         alert($(this).html());
     });
 
+
+//todo  .html() is similar to innerHtml()
     $('#secondaryHeader').click(function (){
-        $(this).html("I know you'll be a star but in someone else's sky, but why, why can't it be in mine.");
+        $(this).html("<h1>.innerHtml()</h1>");
     });
 
+//todo  .text() is similiar to innerText()
+    $('#thirdHeader').click(function (){
+        $(this).text(".innerText");
+    });
 
+//todo  you can retrieve the value of an attribute using the .css('attribute')
+    $('#forthHeader').click(function (){
+        alert($(this).css('width'));
+    });
+//todo  .css() can also manipulate properties
+    $('h4').css('color', 'orange');
+
+//todo  .css() you can chain them to manipulate multiple properties
+    $('h1').css('color', 'skyblue').css('font-size', '75px');
+
+//todo  pass object to change css properties
+    $('#passObject').css({
+        'color': 'firebrick',
+        'background-color': 'papayawhip'
+    });
+
+//todo  define object beforehand then use to change css properties
+    let highlightStyles = {
+        'color': 'red',
+        'background-color': 'yellow',
+        'font-size': '50px'
+    };
+//todo  pass object into .css(object)
+    $('#defineObject').css(highlightStyles);
 
 
 
