@@ -38,6 +38,13 @@ $(document).ready(function (){
     $('h1').css('color', 'skyblue').css('font-size', '75px');
 
 //todo  pass object to change css properties
+    $('#passObject').click(function (){
+        $(this).css({
+            'color': "orange",
+            'background-color': 'black'
+        });
+    });
+
     $('#passObject').css({
         'color': 'firebrick',
         'background-color': 'papayawhip'
@@ -50,7 +57,20 @@ $(document).ready(function (){
         'font-size': '50px'
     };
 //todo  pass object into .css(object)
-    $('#defineObject').css(highlightStyles);
+//     $('#defineObject').css(highlightStyles);
+
+    $('#defineObject').click(function (){
+        $(this).css(highlightStyles);
+    });
+
+//todo  .addClass() - add class to elements or add an additional class to an element
+
+    $('.pHeader').click(function (){
+        $('.evenP').addClass('highlighted');
+    });
+
+
+
 
 
 

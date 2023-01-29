@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <title>jQuery Attributes and CSS</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <style>
+        .oddP{
+            color: indigo;
+            background-color: lightcyan;
+        }
+        .evenP{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .highlighted{
+            background-color: yellow;
+        }
+    </style>
 </head>
 <body>
 <nav class="container-fluid bg bg-info text-center">
@@ -17,6 +30,8 @@
     <div>
         <h3 id="thirdHeader">.text()</h3>
     </div>
+    <br>
+    <hr>
     <div>
         <h4 id="forthHeader">.css()</h4>
     </div>
@@ -25,6 +40,15 @@
     </div>
     <div>
         <h2 id="defineObject">create css object before hand</h2>
+    </div>
+    <hr>
+    <br>
+    <div>
+        <h2 class="pHeader" id="pHeader">.class()</h2>
+            <p class="oddP">First Class</p>
+            <p class="evenP">Second Class</p>
+            <p class="oddP">Third Class</p>
+            <p class="evenP">Forth Class</p>
     </div>
 </div>
 
