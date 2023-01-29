@@ -81,6 +81,17 @@ $(document).ready(function (){
         $('.oddP').toggleClass('highlighted');
     });
 
+//todo exercise - toggle on off class for dd elements
+    $('#toggleOnOff').click(function (){
+       $('dd').toggleClass('invisible');
+    });
+
+//todo bonus - "highlight" dt elements as they are clicked - the "this" keyword targets each element as it is clicked
+    $('dt').click(function (){
+        $(this).css('background-color', 'yellow');
+    })
+
+
 
 
 
