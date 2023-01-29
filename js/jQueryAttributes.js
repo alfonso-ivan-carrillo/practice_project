@@ -69,6 +69,10 @@ $(document).ready(function (){
         $('.evenP').addClass('highlighted');
     });
 
+//todo  .removeClass() - remove class to elements
+    $('#removeBtn').click(function (){
+        $('.oddP').removeClass('oddP');
+    });
 
 
 
