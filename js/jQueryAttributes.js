@@ -92,8 +92,26 @@ $(document).ready(function (){
     })
 
 
+//todo  .each() jQuery method
+    $('li').each(function (index){
+        console.log(index);
+    });
 
+    $('li').each(function (index, element){
+        console.log(element);
+    });
 
+    $('li').each(function (index){
+        if(index % 2 !== 0){
+            $(this).css('background-color', 'yellow');
+        }
+    });
+
+    $('li').each(function (index, element){
+        if(index % 2 !== 1){
+            $(this).css('background-color', 'blue');
+        }
+    })
 
 
 
