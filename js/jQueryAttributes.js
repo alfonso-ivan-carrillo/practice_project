@@ -92,7 +92,7 @@ $(document).ready(function (){
     })
 
 
-//todo  .each() jQuery method
+//todo  .each() jQuery method - similiar to forEach loop - two parameters available, index and element
     $('li').each(function (index){
         console.log(index);
     });
@@ -103,17 +103,19 @@ $(document).ready(function (){
 
     $('li').each(function (index){
         if(index % 2 !== 0){
-            $(this).css('background-color', 'yellow');
+            $(this).css('background-color', 'lime');
         }
     });
 
     $('li').each(function (index, element){
         if(index % 2 !== 1){
-            $(this).css('background-color', 'blue');
+            $(this).css('background-color', 'yellow');
         }
-    })
+    });
 
+//todo  .first() - reduce the set of matched elements to the first in the set.
 
+$('li').first().css("font-weight", "bold").css('font-size', '20px');
 
 
 
