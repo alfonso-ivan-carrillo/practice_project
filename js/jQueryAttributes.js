@@ -119,6 +119,9 @@ $(document).ready(function (){
 //todo  .last() - reduce the set of matched elements to the last in the set.
     $('li').last().css('text-decoration', 'underline');
 
+//todo  .children([selector]) - get the children of each element in the set of matched elements, optionally filtered by a selector.
+    $('#pillarsList').children().css('text-transform', 'uppercase');
+
 
 
 
