@@ -126,7 +126,10 @@ $(document).ready(function (){
 //todo  .parent() - get the parent of each element in the current set of matched elements, optionally filtered by a selector.
 // .parent([selector](optional) and .parents([selector](optional))
 // .parent() will return only elements one set up the DOM, .parents() will travel completely up the DOM tree.
-    $('li').parent().css('background-color', 'magenta')
+    $('li').parent().css('background-color', 'magenta');
+
+//todo  .next() - gets the immediately following sibling of each element in the set of matched elements.
+    $('#traverseTitle').next().css('font-size', '30px');
 
 
 
