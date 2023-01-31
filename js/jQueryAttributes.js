@@ -119,8 +119,15 @@ $(document).ready(function (){
 //todo  .last() - reduce the set of matched elements to the last in the set.
     $('li').last().css('text-decoration', 'underline');
 
-//todo  .children([selector]) - get the children of each element in the set of matched elements, optionally filtered by a selector.
+//todo  .children() - get the children of each element in the set of matched elements, optionally filtered by a selector.
+// .children([selector(optional)])
     $('#pillarsList').children().css('text-transform', 'uppercase');
+
+//todo  .parent() - get the parent of each element in the current set of matched elements, optionally filtered by a selector.
+// .parent([selector](optional) and .parents([selector](optional))
+// .parent() will return only elements one set up the DOM, .parents() will travel completely up the DOM tree.
+    $('li').parent().css('background-color', 'magenta')
+
 
 
 
