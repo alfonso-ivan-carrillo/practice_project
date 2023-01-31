@@ -114,10 +114,10 @@ $(document).ready(function (){
     });
 
 //todo  .first() - reduce the set of matched elements to the first in the set.
+    $('li').first().css("font-weight", "bold").css('font-size', '20px');
 
-$('li').first().css("font-weight", "bold").css('font-size', '20px');
-
-
+//todo  .last() - reduce the set of matched elements to the last in the set.
+    $('li').last().css('text-decoration', 'underline');
 
 
 
