@@ -14,9 +14,19 @@
     .bolder {
       font-weight: bold;
     }
+    .imageFormat{
+      width: 300px;
+      height: 300px;
+      color: white;
+    }
+    .divImage{
+      width: 300px;
+      height: 300px;
+    }
+
   </style>
 </head>
-<body class="bg-white">
+<body class="bg-warning">
   <div class="container text-center">
     <h1>jQuery Transverse</h1>
   </div>
@@ -65,8 +75,60 @@
       <button id="highlightBtn" class="btn btn-info" type="button">Highlight</button>
     </div>
   </div>
+  <hr>
+  <br>
+<!--  <div class="container">-->
+<!--    <div class="row">-->
+<!--      <div class="imageDiv bg-warning card m-2" >-->
+<!--        <img id="ned" src="images/Ned-Stark.png" alt="ned_stark" class="imageFormat">-->
+<!--        <div class="mx-auto">-->
+<!--          <button id="leftBtn" class="btn btn-info m-2" type="button">Left</button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="imageDiv bg-warning card m-2">-->
+<!--        <img id="tyrion" src="images/tyrion.jpg" alt="tyrion" class="imageFormat">-->
+<!--        <div class="mx-auto">-->
+<!--          <button id="centerBtn" class="btn btn-info m-2" type="button">Middle</button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="imageDiv bg-warning card m-2">-->
+<!--        <img id="brienne" src="images/brienne_of_tarth.webp" alt="brienne" class="imageFormat">-->
+<!--        <div class="mx-auto">-->
+<!--          <button id="rightBtn" class="btn btn-info m-2" type="button">Right</button>-->
+<!--        </div>-->
+<!--      </div>-->
 
-
+<!--    </div>-->
+<!--    <br>-->
+<!--    <hr>-->
+<!--    </div>-->
+    <div class="container">
+      <br>
+      <hr>
+      <div class="row mx-auto">
+        <div class="mx-auto one">
+          <img class="imageFormat" src="images/Ned-Stark.png" alt="ned">
+        </div>
+        <div class="mx-auto two">
+          <img class="imageFormat" src="images/tyrion.jpg" alt="tyrion">
+        </div>
+        <div class="mx-auto three">
+          <img class="imageFormat" src="images/brienne_of_tarth.webp" alt="brienne">
+        </div>
+      </div>
+      <div class="container m-4 row">
+        <div class="col">
+          <button id="leftBtn" class="btn btn-info" type="button">Left Square</button>
+        </div>
+        <div class="col">
+          <button id="midBtn" class="btn btn-info" type="button">Mid Square</button>
+        </div>
+        <div class="col">
+        <button id="rightBtn" class="btn btn-info" type="button">Right Square</button>
+        </div>
+      </div>
+    </div>
+  <img id="empty" src="" alt="empty">
 
 
 

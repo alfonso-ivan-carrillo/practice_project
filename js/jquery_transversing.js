@@ -18,4 +18,8 @@ $('li').click(function (){
     // console.log($('li').first().css('color', 'blue'));
 
 
+let nedImage = $('.one').children('img').attr('src');
+    console.log(nedImage);
+
+    $('#empty').attr("src", nedImage);
 });
