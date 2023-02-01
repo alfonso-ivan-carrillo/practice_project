@@ -65,11 +65,37 @@ $('.frame').click(function (){
             //sets middle image to the last frame
             $(this).next('.frame').children('img').attr('src', currentFrame);
         }
-    }
-
-
+    };
 });
 
+
+//todo practice bonus
+    $('.boxes').click(function (){
+        let currentBox = $(this).children('img').attr('src');
+        console.log(currentBox);
+
+        if ($(this).is("#boxOne")){
+            let middleBox = $(this).next('.boxes').children('img').attr('src');
+            $(this).children('img').attr('src', middleBox);
+            // $(this).next('.boxes').children('img').attr('src', currentBox);
+            $('#boxTwo').children('img').attr('src', currentBox);
+        } else if ($(this).is('#boxThree')){
+            let middleBox = $(this).prev('.boxes').children('img').attr('src');
+            $(this).children('img').attr('src', middleBox);
+            $('#boxTwo').children('img').attr('src', currentBox);
+        } else {
+            let randomNum = Math.round(Math.random());
+            if (randomNum == 0){
+                let leftBox = $('#boxOne').children('img').attr('src');
+                $(this).children('img').attr('src', leftBox);
+                $('#boxOne').children('img').attr('src', currentBox);
+            } else {
+                let rightBox = $('#boxThree').children('img').attr('src');
+                $(this).children('img').attr('src', rightBox);
+                $('#boxThree').children('img').attr('src', currentBox);
+            }
+        }
+    });
 
 
 
