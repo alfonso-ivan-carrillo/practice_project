@@ -100,7 +100,6 @@
 
 //todo ---> factory
     function productFactory(title, quantity, categories, price){
-
         return {
             "title" : title,
             "quantity" : quantity,
@@ -113,6 +112,17 @@
 
     const newItem = productFactory("sander", 5, "power tool", 50);
     console.log(newItem);
+
+    $.get("data/inventory-practice.json").done(function (data){
+        let newProductItemArray = [];
+        $(data).each(function (index, element){
+            let newItem = productFactory(element.title, element.quantity, element.categories, element.price);
+            newProductItemArray.push(newItem)
+        });
+
+        console.log(newProductItemArray);
+    })
+
 
 //todo  ---> constructor
     function ProductConstructor(title, quantity, categories, price){
