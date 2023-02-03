@@ -24,7 +24,7 @@
 </main>
 
 <div class="container">
-    <div id="poke">
+    <div id="posts">
 
     </div>
 </div>
@@ -149,6 +149,12 @@
     console.log(newConstructor);
 
 
+    $.get("data/blog-practice.json").done(function (data){
+        $(data).each(function (index, element){
+            $('#posts').append("<span>"+ element.title + "</span><strong style='color: blue'>"  + element.content + "</strong><span style='color:red'>" + element.date + "</span><span style='color: blue'>" + element.categories + "</span>" )
+        })
+        console.log(data);
+    });
 
 
 })();
