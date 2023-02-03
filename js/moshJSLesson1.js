@@ -18,10 +18,11 @@
     console.log(circle.location);
     console.log(circle.radius);
 
-    // todo -> Factories - or constructor function
+//todo
+// --> Factories - or constructor function
     function createCircle(radius){
         return {                                    // todo --> if the function returns an object, then you are using a factory
-            radius: radius,     //todo   takes parameter and adds it to the radius value
+            radius: radius,                         //todo   takes parameter and adds it to the radius value
             draw: function (){
                 console.log('Draw One');
             }
@@ -31,7 +32,8 @@
     circleFactory.draw();
     console.log(circleFactory.radius);
 
-    // todo Constructor Function
+//todo
+// --> Constructor Function
     function Circle(radius){                            // todo -->  notice capitalization of 'circle'
         this.radius = radius;                           // todo -->  this.  refers to the circle object being created
         this.draw = function (){

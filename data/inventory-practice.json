@@ -53,12 +53,27 @@
     ],
     "price": 11
 }, {
-    "title": "shovel",
+    "title": "square shovel",
     "quantity": 11,
     "categories": [
         "tool",
         "outdoor"
     ],
     "price": 12
+},{
+    "title" : "drill",
+    "quantity": 5,
+    "categories": [
+        "tool",
+        "power tool"
+    ],
+    "price": 100
+},{
+    "title" : "moneky wrench",
+    "quantity": 4,
+    "categories": [
+        "tool"
+    ],
+    "price": 25
 }
 ]

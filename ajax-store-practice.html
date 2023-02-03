@@ -20,8 +20,14 @@
         </thead>
         <tbody id="insertProducts"></tbody>
     </table>
-    <button class="btn btn-dark" type="button">Refresh</button>
+    <button id="refreshBtn" class="btn btn-dark" type="submit">Refresh</button>
 </main>
+
+<div class="container">
+    <div id="poke">
+
+    </div>
+</div>
 
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -30,31 +36,101 @@
 <script>
 (function() {
     "use strict";
-    // TODO: Create an AJAX GET request for the file under data/inventory-practice.json
-
-    $.ajax("data/inventory-practice.json").done(function (data, status, jqXhr){
-        console.log("successful");
-        // console.log(data);
-        // console.log([data.title]);
-        $(data).each(function (index, element){
-
-            $('#insertProducts').append("<tr><td>" + element.title + "</td><td>" + element.quantity + "</td><td>" + element.price + "</td><td>" + element.categories + "</td></tr>");
-        })
-        // $('#insertProducts').append("<tr><td>" + data[0].title + "</td><td>" + data[0].quantity + "</td><td>" + data[0].price + "</td><td>" + data[0].categories + "</td></tr>" );
-    }).fail(function (jqXhr, status, error){
-        alert("error");
-    }).always(function (){
-        console.log("run");
-    });
-
-    // TODO: Take the data from inventory.json and append it to the products table
+    //TODO: Create an AJAX GET request for the file under data/inventory-practice.json
+    //TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
 
+//todo   syntax:   $.ajax("file path or url").done(function (data being retrieved, status of run, data object returned)
+    $.ajax("data/inventory-practice.json").done(function (data, status, jqXhr){
+        console.log("The body of the response from the server: " + data);
+        console.log("A string indicating the status of the request: " + status);
+        console.log("A jQuery object that represents the Ajax request: " + jqXhr);
+        // console.log([data.title]);
+//todo   loop through data with .each method and append element(data).property to html
+        $(data).each(function (index, element){
+            $('#insertProducts').append("<tr><td>" + element.title + "</td><td>" + element.quantity + "</td><td>" + element.price + "</td><td>" + element.categories + "</td></tr>");
+        })
+        // $('#insertProducts').append("<tr><td>" + data[0].title + "</td><td>" + data[0].quantity + "</td><td>" + data[0].price + "</td><td>" + data[0].categories + "</td></tr>" );
+    }).fail(function (jqXhr, status, error){
+        alert("Error, check console for details");
+        console.log(("JQuery object that represents the Ajax request: " + jqXhr));
+        console.log("A string representing the status of the request: " + status);
+        console.log(("An object that represents the error that occured: " + error));
+    }).always(function (){
+//todo      .always is always called and will be present if the request is success or fails
+        console.log("run complete.");
+    });
+
+    function getInventory(){
+        $.get("data/inventory-practice.json").done(function (data){
+            $(data).each(function (index, element){
+                $('#insertProducts').append("<tr><td>" + element.title + "</td><td>" + element.quantity + "</td><td>" + element.price + "</td><td>" + element.categories + "</td></tr>");
+            })
+        });
+    };
 
 
 
+
+//todo instead of $.ajax() for simple request, you can use $.get()
+    // $.get("data/inventory-practice.json").done(function (resp){
+    //     $(resp).each(function (index, element){
+    //         $('#insertProducts').append("<tr><td>" + element.title + "</td><td>" + element.quantity + "</td><td>" + element.price + "</td><td>" + element.categories + "</td></tr>");
+    //     });
+    // });
+
+
+//todo from codeup lecture - retrieve data from pokeman api
+    // $.get("https://pokeapi.co/api/v2/pokemon/charizard").done(function (resp){
+    //     $('#poke').append(resp.abilities[0].ability.name)
+    //     console.log(resp.abilities[0].ability.name);
+    // });
+
+
+
+    $("#refreshBtn").click(function (){
+        console.log("yes");
+        $('#insertProducts').html("");
+        getInventory();
+    });
+
+
+
+//todo ---> factory
+    function productFactory(title, quantity, categories, price){
+
+        return {
+            "title" : title,
+            "quantity" : quantity,
+            "categories" : [
+                categories
+            ],
+            "price" : price
+        }
+    }
+
+    const newItem = productFactory("sander", 5, "power tool", 50);
+    console.log(newItem);
+
+//todo  ---> constructor
+    function ProductConstructor(title, quantity, categories, price){
+        this.title = title;
+        this.quantity = quantity;
+        this.categories = [categories];
+        this.price = price;
+    }
+
+    let newConstructor = new ProductConstructor("jigsaw");
+    // console.log(newConstructor);
+    newConstructor.price = 50;
+    newConstructor.quantity = 2;
+    newConstructor.categories.pop();
+    newConstructor.categories.push("power tool");
+    console.log(newConstructor);
+    newConstructor.categories.push("tool");
+    console.log(newConstructor);
 })();
 </script>
 
