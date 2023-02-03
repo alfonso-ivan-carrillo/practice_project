@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Prototype </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body class="bg-info">
+<div class="container text-center">
+  <h1 class="text-white">Prototype</h1>
+</div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script>
+  "use strict";
+  $(document).ready(function (){
+
+    //todo *************** Object Prototypes **************
+//todo      Every object in JavaScript has a built-in property, which is called Prototype, this prototype is itself an object
+//todo      so the prototype will have its own prototype, making what is called a prototype chain.
+//todo      The standard way to access an object's prototype is the Object.getPrototypeOf() method. Maybe be referenced as proto
+//todo      When you try to access a property of an object: if the property can't be found in the object itself, the prototype is searched for the property. If the property still can't be found, then the prototype's prototype is searched, and so on until either the property is found, or the end of the chain is reached, in which case undefined is returned.
+    const myObject = {
+      city: "Matrid",
+      greet() {
+        console.log("Greetings from " + this.city);
+      },
+    };
+    console.log(myObject);
+    myObject.greet();
+    console.log(myObject.toString());
+
+    console.log(Object.getPrototypeOf(myObject));
+
+    const myDate = new Date(2004, 11, 26);
+    // let object = myDate;
+    //
+    // do {
+    //     object = Object.getPrototypeOf(object);
+    //     console.log(object);
+    // } while (object);
+
+//todo  shadowing property
+    console.log(myDate.getFullYear());
+    myDate.getFullYear = function (){
+      console.log("something else");
+    };
+    myDate.getFullYear();
+
+//todo  This should be predictable, given the description of the prototype chain. When we call getYear() the browser first looks in myDate for a property with that name, and only checks the prototype if myDate does not define it. So when we add getYear() to myDate, then the version in myDate is called.
+//todo  This is called "shadowing" the property.
+
+//todo  Setting a Prototype
+//todo  two ways to set an object's prototype  Object.create() and Constructors
+
+
+//todo  using Object.create()
+    const personPrototype = {
+      greet(){
+        console.log("Hello, my name is " + this.name + "!");
+      },
+    };
+
+    const carl = Object.create(personPrototype);
+    carl.greet();   // Hello, my name is undefined (we haven't added a name value to carl object)
+
+//todo    Here we create an object personPrototype, which has a greet() method. We then use Object.create() to create a new object with personPrototype as its prototype. Now we can call greet() on the new object, and the prototype provides its implementation.
+
+
+//todo    Using a constructor
+
+//todo    In JavaScript, all functions have a property named prototype. When you call a function as a constructor, this property is set as the prototype of the newly constructed object (by convention, in the property named __proto__).
+// todo   So if we set the prototype of a constructor, we can ensure that all objects created with that constructor are given that prototype:
+
+      function Person(name){
+          this.name = name;
+      }
+
+      Object.assign(Person.prototype, personPrototype);
+
+//todo      We then put the methods defined in personPrototype onto the Person function's prototype property using Object.assign. After this code, objects created using Person() will get Person.prototype as their prototype, which automatically contains the greet method.
+
+      const ethan = new Person('ethan');
+      ethan.greet();
+
+//todo      It's common to see this pattern, in which methods are defined on the prototype, but data properties are defined in the constructor. That's because methods are usually the same for every object we create, while we often want each object to have its own value for its data properties (just as here where every person has a different name).
+
+//todo      Properties that are defined directly in the object, like name here, are called own properties, and you can check whether a property is an own property using the static Object.hasOwn() method:
+
+      console.log(Object.hasOwn(ethan, "name"));    // true
+      console.log(Object.hasOwn(ethan, 'greet'));   // false
+
+
+
+  });
+</script>
+</body>
+</html>

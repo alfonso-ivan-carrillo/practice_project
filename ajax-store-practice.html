@@ -117,19 +117,25 @@
         let newProductItemArray = [];
         $(data).each(function (index, element){
             let newItem = productFactory(element.title, element.quantity, element.categories, element.price);
-            newProductItemArray.push(newItem)
+            newProductItemArray.push(newItem);
         });
 
         console.log(newProductItemArray);
-    })
+    });
+
+    function renderHtml(){
+        let html = "";
+        html
+
+    };
 
 
 //todo  ---> constructor
-    function ProductConstructor(title, quantity, categories, price){
-        this.title = title;
-        this.quantity = quantity;
-        this.categories = [categories];
-        this.price = price;
+    function ProductConstructor(item){
+        this.title = item.title;
+        this.quantity = item.quantity;
+        this.categories = [item.categories];
+        this.price = item.price;
     }
 
     let newConstructor = new ProductConstructor("jigsaw");
@@ -141,6 +147,10 @@
     console.log(newConstructor);
     newConstructor.categories.push("tool");
     console.log(newConstructor);
+
+
+
+
 })();
 </script>
 
