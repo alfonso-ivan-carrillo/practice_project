@@ -22,11 +22,18 @@
     </table>
     <button id="refreshBtn" class="btn btn-dark" type="submit">Refresh</button>
 </main>
+<br>
 
 <div class="container">
     <div id="posts">
 
     </div>
+</div>
+<div class="container">
+    <div id="blogPost">
+
+    </div>
+
 </div>
 
 
@@ -150,12 +157,50 @@
 
 
     $.get("data/blog-practice.json").done(function (data){
+//todo      setup <table><thead><tr><th> to receive table header info and to append data as they are retrieved
+        $('#posts').html("<table id='blogTable' class='table table-bordered'>" +
+            "<thead class='thead-dark'><tr><th>Date</th><th>Title</th><th>Content</th><th>Categories</th></tr></thead></table>");
+
         $(data).each(function (index, element){
-            $('#posts').append("<span>"+ element.title + "</span><strong style='color: blue'>"  + element.content + "</strong><span style='color:red'>" + element.date + "</span><span style='color: blue'>" + element.categories + "</span>" )
-        })
+            let renderTable =
+                "<tr><td>" + element.date + "</td>" +
+                "<td>" + element.title + "</td>" +
+                "<td>" + element.content + "</td>" +
+                "<td>" + element.categories + "</td>" +
+                "</tr>";
+                $('#blogTable').append(renderTable);
+        });
         console.log(data);
     });
 
+    function BlogPost(post){
+        this.title = post.title;
+        this.date = post.date;
+        this.content = post.content;
+        this.categories = post.categories;
+    };
+
+    let testBlog = {
+        "title": "one",
+        "date": "Jan 8th",
+        "content": "test test test test",
+        "categories": "song"
+    };
+
+    // let bloggie = $(document.createElement('h1')).attr('class', 'container').attr('style', 'color: red').html("Hello!");
+    // $('#blogPost').append(bloggie);
+
+
+    $.get('data/blog-practice.json').done(function (data){
+       $(data).each(function (index, element){
+           let titlePost = $(document.createElement('h2')).attr('class', 'border border-info').html('Title: ').append(element.title);
+           let datePost = $(document.createElement('strong')).attr('style', 'color: blue').append(element.date);
+           let contentPost = $(document.createElement('p')).attr('style', 'color: orange').append(element.content);
+           let categoriesPost = $(document.createElement('p')).attr('style', 'color: brown').append(element.categories);
+           $('#blogPost').attr('class', 'border border-info').append(titlePost).append(datePost).append(contentPost).append(categoriesPost);
+
+       });
+    });
 
 })();
 </script>
