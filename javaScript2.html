@@ -9,6 +9,19 @@
 <div class="container text-center">
   <h1 class="text-light">JavaScript II</h1>
 </div>
+<div id="displayInfo" class="container">
+
+</div>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -17,6 +30,108 @@
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-<script src="js/javaScriptTwo.js"></script>
+<!--<script src="js/javaScriptTwo.js"></script>-->
+
+<script>
+    const users = [
+        {
+            name: 'zach',
+            email: 'zach@codeup.com',
+            languages: ['javascript', 'bash']
+        },
+        {
+            name: 'ryan',
+            email: 'ryan@codeup.com',
+            languages: ['clojure', 'javascript']
+        },
+        {
+            name: 'luis',
+            email: 'luis@codeup.com',
+            languages: ['java', 'scala', 'php']
+        },
+        {
+            name: 'fernando',
+            email: 'fernando@codeup.com',
+            languages: ['java', 'php', 'sql']
+        },
+        {
+            name: 'justin',
+            email: 'justin@codeup.com',
+            languages: ['html', 'css', 'javascript', 'php']
+        }
+    ];
+
+    // TODO: fill in your name and email and add some programming languages you know
+    // to the languages array
+    // TODO: replace the `var` keyword with `const`, then try to reassign a variable
+    // declared as `const`
+    const name = 'alfonso carrillo';
+    const email = 'meccadown@yahoo.com';
+    const languages = ['html', 'css', 'js', 'jquery'];
+
+    // TODO: rewrite the object literal using object property shorthand
+    users.push({
+        name,
+        email,
+        languages,
+    });
+
+    // TODO: replace `var` with `let` in the following variable declarations
+    let emails = [];
+    let names = [];
+
+    // TODO: rewrite the following using arrow functions
+    // users.forEach(function(user) {
+    //     return emails.push(user.email);
+    // });
+
+    users.forEach(user => emails.push(user.email));
+    console.log(emails);
+    $(users).each(function (index, element){
+        let nameList = $(document.createElement('h3')).attr('class', 'text-light').html('name: ' + element.name);
+        $('#displayInfo').append(nameList);
+    });
+
+    // users.forEach(function(user) {
+    //     return names.push(user.name);
+    // });
+
+    users.forEach(user => names.push(user.name) );
+    console.log(names);
+    $(users).each(function (index, element){
+        let tempDiv = $(document.createElement('div')).attr('class', 'container row');
+        let emailList = $(document.createElement('h3')).attr('class', 'text-warning').html("email: " + element.name + " <br>  name: " + element.email
+        + "<br> languages: " + element.languages);
+        $(tempDiv).append(emailList);
+        $('#displayInfo').append(tempDiv);
+    });
+
+
+    // TODO: replace `var` with `let` in the following declaration
+    let developers = [];
+    users.forEach(function(user) {
+        // TODO: rewrite the code below to use object destructuring assignment
+        //       note that you can also use destructuring assignment in the function
+        //       parameter definition
+        const name = user.name;
+        const email = user.email;
+        const languages = user.languages;
+
+        // TODO: rewrite the assignment below to use template strings
+        developers.push(name + '\'s email is ' + email + name + ' knows ' + languages.join(', '));
+    });
+
+    // TODO: Use `let` for the following variable
+    var list = '<ul>';
+
+    // TODO: rewrite the following loop to use a for..of loop
+    developers.forEach(function (developer) {
+
+        // TODO: rewrite the assignment below to use template strings
+        list += '<li>' + developer + '</li>';
+    });
+    list += '</ul>';
+</script>
+
 </body>
 </html>
